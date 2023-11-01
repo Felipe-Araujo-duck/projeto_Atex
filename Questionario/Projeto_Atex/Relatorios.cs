@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace Projeto_Atex
 {
-    public partial class Relatorios : Form
+    public partial class Relatorios : MetroFramework.Forms.MetroForm
     {
         public Relatorios()
         {

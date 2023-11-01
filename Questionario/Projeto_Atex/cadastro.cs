@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace Projeto_Atex
 {
-    public partial class cadastro : Form
+    public partial class cadastro : MetroFramework.Forms.MetroForm
     {
         public cadastro()
         {

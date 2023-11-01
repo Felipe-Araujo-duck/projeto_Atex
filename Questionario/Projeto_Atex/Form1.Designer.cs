@@ -40,14 +40,14 @@
             this.TextoInicio.AutoSize = true;
             this.TextoInicio.BackColor = System.Drawing.Color.Transparent;
             this.TextoInicio.Font = new System.Drawing.Font("Franklin Gothic Medium", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.TextoInicio.ForeColor = System.Drawing.Color.White;
-            this.TextoInicio.Location = new System.Drawing.Point(42, 29);
-            this.TextoInicio.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.TextoInicio.ForeColor = System.Drawing.Color.Black;
+            this.TextoInicio.Location = new System.Drawing.Point(28, 39);
             this.TextoInicio.Name = "TextoInicio";
-            this.TextoInicio.Size = new System.Drawing.Size(52, 23);
+            this.TextoInicio.Size = new System.Drawing.Size(36, 16);
             this.TextoInicio.TabIndex = 1;
             this.TextoInicio.Text = "label";
             this.TextoInicio.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.TextoInicio.Click += new System.EventHandler(this.TextoInicio_Click);
             // 
             // button1
             // 
@@ -60,10 +60,9 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(566, 432);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.button1.Location = new System.Drawing.Point(377, 261);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(152, 68);
+            this.button1.Size = new System.Drawing.Size(101, 54);
             this.button1.TabIndex = 2;
             this.button1.Text = "Inicar Questionário";
             this.button1.UseVisualStyleBackColor = false;
@@ -74,11 +73,10 @@
             this.TextoFim.AutoSize = true;
             this.TextoFim.BackColor = System.Drawing.Color.Transparent;
             this.TextoFim.Font = new System.Drawing.Font("Franklin Gothic Medium", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.TextoFim.ForeColor = System.Drawing.Color.White;
-            this.TextoFim.Location = new System.Drawing.Point(42, 542);
-            this.TextoFim.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.TextoFim.ForeColor = System.Drawing.Color.Black;
+            this.TextoFim.Location = new System.Drawing.Point(28, 346);
             this.TextoFim.Name = "TextoFim";
-            this.TextoFim.Size = new System.Drawing.Size(52, 23);
+            this.TextoFim.Size = new System.Drawing.Size(36, 16);
             this.TextoFim.TabIndex = 3;
             this.TextoFim.Text = "label";
             this.TextoFim.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -90,10 +88,9 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button2.Font = new System.Drawing.Font("Franklin Gothic Medium", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(1118, 608);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.button2.Location = new System.Drawing.Point(737, 398);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(135, 60);
+            this.button2.Size = new System.Drawing.Size(90, 39);
             this.button2.TabIndex = 4;
             this.button2.Text = "Relatorio de Pesquisa";
             this.button2.UseVisualStyleBackColor = false;
@@ -101,17 +98,17 @@
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.ClientSize = new System.Drawing.Size(1264, 682);
+            this.ClientSize = new System.Drawing.Size(843, 453);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.TextoFim);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.TextoInicio);
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Form1";
+            this.Padding = new System.Windows.Forms.Padding(13, 60, 13, 13);
             this.ResumeLayout(false);
             this.PerformLayout();
 
