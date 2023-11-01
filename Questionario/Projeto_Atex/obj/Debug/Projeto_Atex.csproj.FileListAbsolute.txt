@@ -1,0 +1,16 @@
+C:\GitHub\projeto_Atex\Questionario\Projeto_Atex\bin\Debug\Projeto_Atex.exe.config
+C:\GitHub\projeto_Atex\Questionario\Projeto_Atex\bin\Debug\Projeto_Atex.exe
+C:\GitHub\projeto_Atex\Questionario\Projeto_Atex\bin\Debug\Projeto_Atex.pdb
+C:\GitHub\projeto_Atex\Questionario\Projeto_Atex\bin\Debug\MetroFramework.dll
+C:\GitHub\projeto_Atex\Questionario\Projeto_Atex\bin\Debug\MetroFramework.Fonts.dll
+C:\GitHub\projeto_Atex\Questionario\Projeto_Atex\obj\Debug\Projeto_Atex.csproj.AssemblyReference.cache
+C:\GitHub\projeto_Atex\Questionario\Projeto_Atex\obj\Debug\Projeto_Atex.cadastro.resources
+C:\GitHub\projeto_Atex\Questionario\Projeto_Atex\obj\Debug\Projeto_Atex.Form1.resources
+C:\GitHub\projeto_Atex\Questionario\Projeto_Atex\obj\Debug\Projeto_Atex.Properties.Resources.resources
+C:\GitHub\projeto_Atex\Questionario\Projeto_Atex\obj\Debug\Projeto_Atex.questionario_Tempo.resources
+C:\GitHub\projeto_Atex\Questionario\Projeto_Atex\obj\Debug\Projeto_Atex.Relatorios.resources
+C:\GitHub\projeto_Atex\Questionario\Projeto_Atex\obj\Debug\Projeto_Atex.csproj.GenerateResource.cache
+C:\GitHub\projeto_Atex\Questionario\Projeto_Atex\obj\Debug\Projeto_Atex.csproj.CoreCompileInputs.cache
+C:\GitHub\projeto_Atex\Questionario\Projeto_Atex\obj\Debug\Projeto_Atex.csproj.CopyComplete
+C:\GitHub\projeto_Atex\Questionario\Projeto_Atex\obj\Debug\Projeto_Atex.exe
+C:\GitHub\projeto_Atex\Questionario\Projeto_Atex\obj\Debug\Projeto_Atex.pdb
