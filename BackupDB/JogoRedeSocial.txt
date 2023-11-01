@@ -1,0 +1,9 @@
+INSERT INTO JogoRedeSocial (Nome, Dominio, Tipo)
+VALUES
+    ('TikTok', 'www.tiktok.com', 'Rede Social'),
+    ('YouTube', 'www.youtube.com', 'Rede Social'),
+    ('Free Fire', 'www.freefire.com', 'Jogo'),
+    ('Stumble Guys', 'www.stumbleguys.com', 'Jogo'),
+    ('Roblox', 'www.roblox.com', 'Jogo'),
+    ('Minecraft', 'www.minecraft.com', 'Jogo'),
+    ('Subway Surf', 'www.subwaysurf.com', 'Jogo');
