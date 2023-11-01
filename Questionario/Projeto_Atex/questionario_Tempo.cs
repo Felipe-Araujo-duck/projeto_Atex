@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace Projeto_Atex
 {
-    public partial class questionario_Tempo : Form
+    public partial class questionario_Tempo : MetroFramework.Forms.MetroForm
     {
         public questionario_Tempo()
         {

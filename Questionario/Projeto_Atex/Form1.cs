@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace Projeto_Atex
 {
-    public partial class Form1 : Form
+    public partial class Form1 : MetroFramework.Forms.MetroForm
     {
         public Form1()
         {
@@ -30,6 +30,11 @@ namespace Projeto_Atex
         {
             Relatorios FR = new Relatorios();
             FR.ShowDialog();
+        }
+
+        private void TextoInicio_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
