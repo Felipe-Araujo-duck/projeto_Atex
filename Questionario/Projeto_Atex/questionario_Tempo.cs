@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Projeto_Atex.Data.Entity;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,12 +13,17 @@ namespace Projeto_Atex
 {
     public partial class questionario_Tempo : MetroFramework.Forms.MetroForm
     {
-        public questionario_Tempo()
+        public questionario_Tempo(Responsavel responsavel, Questionario questionario, Crianca crianca)
         {
             InitializeComponent();
+            this.responsavel = responsavel;
+            this.questionario = questionario;
+            this.crianca = crianca;
         }
-
-        
+        public Responsavel responsavel;
+        public Questionario questionario;
+        public Crianca crianca;
+        public CriancaJogoRedeSocial criancaJogoRedeSocial;
 
         private void textBox1_KeyPress_1(object sender, KeyPressEventArgs e)
         {
@@ -56,6 +62,10 @@ namespace Projeto_Atex
 
         private void button1_Click(object sender, EventArgs e)
         {
+            if (cbInternet.Text == "Sim")
+                questionario.AcessoInternet = true;
+
+
             MessageBox.Show("Questionário finalizado com sucesso!");
             Program.FC.Close();
             Close();

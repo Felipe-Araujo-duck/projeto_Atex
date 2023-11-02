@@ -10,7 +10,7 @@ namespace Projeto_Atex.Data.Entity
     {
         public int IdCrianca { get; set; }
         public string Nome { get; set; }
-        public DateTime DataNascimento { get; set; }
+        public string DataNascimento { get; set; }
         public int IdResponsavel { get; set; }
         public int IdEscola { get; set; }
     }
