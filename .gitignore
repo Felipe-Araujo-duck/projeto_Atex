@@ -21,8 +21,8 @@ packages/
 *.user
 *.suo
 *.bak
-*.resources
 *.pdb
+*.resources
 
 # Ignorar arquivos de compilação C#
 [Cc]ache/
@@ -82,5 +82,4 @@ Questionario/Projeto_Atex/obj/
 
 # Ignorar arquivos de compilação e dependências
 *.pdb
-*.exe
 *.resources

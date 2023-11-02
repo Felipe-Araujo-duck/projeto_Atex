@@ -33,7 +33,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.cbInternet = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtTempoDeUso = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.ckYoutube = new System.Windows.Forms.CheckBox();
             this.ckTikTok = new System.Windows.Forms.CheckBox();
@@ -118,15 +118,15 @@
             this.label3.TabIndex = 18;
             this.label3.Text = "Horas de uso por dia: ";
             // 
-            // textBox1
+            // txtTempoDeUso
             // 
-            this.textBox1.BackColor = System.Drawing.Color.White;
-            this.textBox1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.textBox1.Location = new System.Drawing.Point(564, 99);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(125, 20);
-            this.textBox1.TabIndex = 19;
-            this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress_1);
+            this.txtTempoDeUso.BackColor = System.Drawing.Color.White;
+            this.txtTempoDeUso.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.txtTempoDeUso.Location = new System.Drawing.Point(564, 99);
+            this.txtTempoDeUso.Name = "txtTempoDeUso";
+            this.txtTempoDeUso.Size = new System.Drawing.Size(125, 20);
+            this.txtTempoDeUso.TabIndex = 19;
+            this.txtTempoDeUso.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress_1);
             // 
             // label4
             // 
@@ -355,7 +355,7 @@
             this.Controls.Add(this.ckTikTok);
             this.Controls.Add(this.ckYoutube);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtTempoDeUso);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.cbInternet);
             this.Controls.Add(this.label2);
@@ -374,7 +374,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox cbInternet;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtTempoDeUso;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.CheckBox ckYoutube;
         private System.Windows.Forms.CheckBox ckTikTok;

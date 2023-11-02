@@ -248,7 +248,7 @@
             this.Name = "cadastro";
             this.Text = "Area de Cadastro";
             this.Load += new System.EventHandler(this.cadastro_Load);
-            this.ResumeLayout(false);
+            this.ResumeLayout(true);
             this.PerformLayout();
 
         }

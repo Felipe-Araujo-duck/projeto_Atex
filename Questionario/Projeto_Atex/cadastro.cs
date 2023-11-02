@@ -38,6 +38,8 @@ namespace Projeto_Atex
             crianca.Nome = txtNome.Text;
             crianca.DataNascimento = DateTime.Parse(dataNascimento.Text).ToString("yyyy-MM-dd");
             crianca.IdEscola = int.Parse(cbEscola.SelectedValue.ToString());
+            if (cbMonitoramento.Equals("Sim"))
+                questionario.RecebeMonitoramento = 1;
 
             questionario_Tempo Qt = new questionario_Tempo(responsavel, questionario, crianca);
             Qt.ShowDialog();
