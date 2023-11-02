@@ -5,6 +5,8 @@ bin/
 obj/
 out/
 packages/
+Questionario/Projeto_Atex/bin/
+Questionario/Projeto_Atex/obj/
 *_Resharper.Caches/
 
 # Ignorar arquivos de compilação e dependências

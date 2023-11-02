@@ -1,7 +1,0 @@
-INSERT INTO Escola (IdEscola, Cidade, Rua, Bairro, Numero, Nome)
-VALUES
-    (1, 'São Paulo', 'Avenida Paulista', 'Centro', '123', 'Escola ABC'),
-    (2, 'Rio de Janeiro', 'Rua Copacabana', 'Laranjeiras', '456', 'Escola XYZ'),
-    (3, 'Belo Horizonte', 'Avenida dos Anjos', 'Savassi', '789', 'Escola 123'),
-    (4, 'Porto Alegre', 'Rua das Flores', 'Boa Vista', '101', 'Escola DFG'),
-    (5, 'Brasília', 'Quadra Sul', 'Asa Sul', '222', 'Escola QWE');

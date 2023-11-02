@@ -1,7 +1,0 @@
-INSERT INTO OutroJogoRedeSocial (Nome, Tipo)
-VALUES
-    ('Aventuras no Espaço', 'Jogo'),
-    ('Reinos Mágicos', 'Rede Social'),
-    ('Corrida Extrema', 'Jogo'),
-    ('Desafio das Palavras', 'Rede Social'),
-    ('Defensores da Terra', 'Jogo');

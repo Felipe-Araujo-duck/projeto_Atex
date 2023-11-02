@@ -1,7 +1,0 @@
-INSERT INTO Criança (IdCrianca, Nome, DataNascimento, IdResponsavel, IdEscola)
-VALUES
-    (1, 'João', '2010-01-01', 1, 1),
-    (2, 'Maria', '2011-02-02', 2, 2),
-    (3, 'Pedro', '2012-03-03', 3, 3),
-    (4, 'Ana', '2013-04-04', 4, 4),
-    (5, 'Luiza', '2014-05-05', 5, 5);

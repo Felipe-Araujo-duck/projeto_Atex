@@ -1,7 +1,0 @@
-INSERT INTO Responsavel (IdResponsavel, Nome, Email, Telefone)
-VALUES
-    (1, 'João Silva', 'joao.silva@email.com', '123-456-7890'),
-    (2, 'Maria Santos', 'maria.santos@email.com', '987-654-3210'),
-    (3, 'Pedro Oliveira', 'pedro.oliveira@email.com', '111-222-3333'),
-    (4, 'Ana Pereira', 'ana.pereira@email.com', '555-777-9999'),
-    (5, 'Luiza Mendes', 'luiza.mendes@email.com', '444-888-6666');
