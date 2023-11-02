@@ -22,5 +22,10 @@ namespace Projeto_Atex
             questionario_Tempo Qt = new questionario_Tempo();
             Qt.ShowDialog();
         }
+
+        private void cadastro_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

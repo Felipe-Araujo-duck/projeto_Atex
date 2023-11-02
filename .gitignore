@@ -5,8 +5,6 @@ bin/
 obj/
 out/
 packages/
-Questionario/Projeto_Atex/bin/
-Questionario/Projeto_Atex/obj/
 *_Resharper.Caches/
 
 # Ignorar arquivos de compilação e dependências
@@ -71,11 +69,11 @@ npm-debug.log
 # Ignorar diretório de compilação do Xamarin
 bin/
 obj/
-Questionario/Projeto_Atex/bin/
-Questionario/Projeto_Atex/obj/
 
 # Ignorar diretório de compilação do .NET Core
 bin/
 obj/
+
+# Ignorar bin e obj dentro de Questionario/Projeto_Atex
 Questionario/Projeto_Atex/bin/
 Questionario/Projeto_Atex/obj/
