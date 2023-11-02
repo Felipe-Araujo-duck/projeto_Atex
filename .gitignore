@@ -1,0 +1,75 @@
+# Ignorar arquivos e pastas do Visual Studio
+.vscode/
+.vs/
+bin/
+obj/
+out/
+packages/
+*_Resharper.Caches/
+
+# Ignorar arquivos de compilação e dependências
+*.dll
+*.exe
+*.pdb
+*.cache
+*.suo
+*.user
+*.log
+*.dat
+*.txt
+*.xml
+*.user
+*.suo
+*.bak
+
+# Ignorar arquivos de compilação C#
+[Cc]ache/
+[Oo]bj/
+[Bb]in/
+
+# Ignorar arquivos de configuração
+Web.config
+App.config
+
+# Ignorar arquivos temporários
+[Tt]emp/
+[Tt]mp/
+
+# Ignorar arquivos de usuário
+desktop.ini
+Thumbs.db
+UserSettings.config
+
+# Ignorar arquivos de saída do Visual Studio
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.userprefs
+
+# Ignorar arquivos de análise estática
+_JustCode
+_ReSharper
+
+# Ignorar diretório de logs
+logs/
+log/
+Log/
+LogFiles/
+_logs/
+
+# Ignorar diretório Node.js
+node_modules/
+npm-debug.log
+
+# Ignorar arquivos de código da IDE
+.vscode/
+.idea/
+
+# Ignorar diretório de compilação do Xamarin
+bin/
+obj/
+
+# Ignorar diretório de compilação do .NET Core
+bin/
+obj/
