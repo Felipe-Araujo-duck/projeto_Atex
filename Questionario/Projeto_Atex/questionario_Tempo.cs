@@ -29,28 +29,28 @@ namespace Projeto_Atex
 
         private void checkBox3_Click(object sender, EventArgs e)
         {
-            if (checkBox3.Checked)
+            if (ckOutrasRedes.Checked)
             {
                 label5.Visible = true;
-                textBox2.Visible = true;
+                txtNomeOutraRede.Visible = true;
             }else
             {
                 label5.Visible = false;
-                textBox2.Visible = false;
+                txtNomeOutraRede.Visible = false;
             }
         }
 
         private void checkBox9_Click(object sender, EventArgs e)
         {
-            if (checkBox9.Checked)
+            if (ckOutrosJogos.Checked)
             {
                 label8.Visible = true;
-                textBox3.Visible = true;
+                txtOutrosJogos.Visible = true;
             }
             else
             {
                 label8.Visible = false;
-                textBox3.Visible = false;
+                txtOutrosJogos.Visible = false;
             }
         }
 

@@ -29,26 +29,26 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cbPossuiCelular = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.cbInternet = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.ckYoutube = new System.Windows.Forms.CheckBox();
+            this.ckTikTok = new System.Windows.Forms.CheckBox();
+            this.ckOutrasRedes = new System.Windows.Forms.CheckBox();
+            this.txtNomeOutraRede = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.checkBox4 = new System.Windows.Forms.CheckBox();
-            this.checkBox5 = new System.Windows.Forms.CheckBox();
-            this.checkBox6 = new System.Windows.Forms.CheckBox();
-            this.checkBox7 = new System.Windows.Forms.CheckBox();
-            this.checkBox8 = new System.Windows.Forms.CheckBox();
-            this.checkBox9 = new System.Windows.Forms.CheckBox();
+            this.ckMinecraft = new System.Windows.Forms.CheckBox();
+            this.ckRoblox = new System.Windows.Forms.CheckBox();
+            this.ckFreeFire = new System.Windows.Forms.CheckBox();
+            this.ckSubway = new System.Windows.Forms.CheckBox();
+            this.ckStumble = new System.Windows.Forms.CheckBox();
+            this.ckOutrosJogos = new System.Windows.Forms.CheckBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtOutrosJogos = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -64,20 +64,20 @@
             this.label1.TabIndex = 12;
             this.label1.Text = "Você possui celular proprio: ";
             // 
-            // comboBox1
+            // cbPossuiCelular
             // 
-            this.comboBox1.BackColor = System.Drawing.Color.LightGray;
-            this.comboBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.comboBox1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.cbPossuiCelular.BackColor = System.Drawing.Color.LightGray;
+            this.cbPossuiCelular.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cbPossuiCelular.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.cbPossuiCelular.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.cbPossuiCelular.FormattingEnabled = true;
+            this.cbPossuiCelular.Items.AddRange(new object[] {
             "Sim",
             "Não"});
-            this.comboBox1.Location = new System.Drawing.Point(239, 97);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 13;
+            this.cbPossuiCelular.Location = new System.Drawing.Point(239, 97);
+            this.cbPossuiCelular.Name = "cbPossuiCelular";
+            this.cbPossuiCelular.Size = new System.Drawing.Size(121, 21);
+            this.cbPossuiCelular.TabIndex = 13;
             // 
             // label2
             // 
@@ -91,20 +91,20 @@
             this.label2.TabIndex = 14;
             this.label2.Text = "Tem acesso a internet: ";
             // 
-            // comboBox2
+            // cbInternet
             // 
-            this.comboBox2.BackColor = System.Drawing.Color.LightGray;
-            this.comboBox2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.comboBox2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.comboBox2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
+            this.cbInternet.BackColor = System.Drawing.Color.LightGray;
+            this.cbInternet.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cbInternet.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.cbInternet.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.cbInternet.FormattingEnabled = true;
+            this.cbInternet.Items.AddRange(new object[] {
             "Sim",
             "Não"});
-            this.comboBox2.Location = new System.Drawing.Point(201, 150);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 21);
-            this.comboBox2.TabIndex = 15;
+            this.cbInternet.Location = new System.Drawing.Point(201, 150);
+            this.cbInternet.Name = "cbInternet";
+            this.cbInternet.Size = new System.Drawing.Size(121, 21);
+            this.cbInternet.TabIndex = 15;
             // 
             // label3
             // 
@@ -140,55 +140,55 @@
             this.label4.TabIndex = 20;
             this.label4.Text = "Quais redes socias você utiliza: ";
             // 
-            // checkBox1
+            // ckYoutube
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.BackColor = System.Drawing.Color.White;
-            this.checkBox1.Font = new System.Drawing.Font("Franklin Gothic Medium", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.checkBox1.Location = new System.Drawing.Point(280, 206);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(74, 19);
-            this.checkBox1.TabIndex = 21;
-            this.checkBox1.Text = "YouTube";
-            this.checkBox1.UseVisualStyleBackColor = false;
+            this.ckYoutube.AutoSize = true;
+            this.ckYoutube.BackColor = System.Drawing.Color.White;
+            this.ckYoutube.Font = new System.Drawing.Font("Franklin Gothic Medium", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ckYoutube.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.ckYoutube.Location = new System.Drawing.Point(280, 206);
+            this.ckYoutube.Name = "ckYoutube";
+            this.ckYoutube.Size = new System.Drawing.Size(74, 19);
+            this.ckYoutube.TabIndex = 21;
+            this.ckYoutube.Text = "YouTube";
+            this.ckYoutube.UseVisualStyleBackColor = false;
             // 
-            // checkBox2
+            // ckTikTok
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.BackColor = System.Drawing.Color.White;
-            this.checkBox2.Font = new System.Drawing.Font("Franklin Gothic Medium", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.checkBox2.Location = new System.Drawing.Point(373, 206);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(67, 19);
-            this.checkBox2.TabIndex = 22;
-            this.checkBox2.Text = "Tik Tok";
-            this.checkBox2.UseVisualStyleBackColor = false;
+            this.ckTikTok.AutoSize = true;
+            this.ckTikTok.BackColor = System.Drawing.Color.White;
+            this.ckTikTok.Font = new System.Drawing.Font("Franklin Gothic Medium", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ckTikTok.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.ckTikTok.Location = new System.Drawing.Point(373, 206);
+            this.ckTikTok.Name = "ckTikTok";
+            this.ckTikTok.Size = new System.Drawing.Size(67, 19);
+            this.ckTikTok.TabIndex = 22;
+            this.ckTikTok.Text = "Tik Tok";
+            this.ckTikTok.UseVisualStyleBackColor = false;
             // 
-            // checkBox3
+            // ckOutrasRedes
             // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.BackColor = System.Drawing.Color.White;
-            this.checkBox3.Font = new System.Drawing.Font("Franklin Gothic Medium", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.checkBox3.Location = new System.Drawing.Point(461, 206);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(64, 19);
-            this.checkBox3.TabIndex = 23;
-            this.checkBox3.Text = "Outros";
-            this.checkBox3.UseVisualStyleBackColor = false;
-            this.checkBox3.Click += new System.EventHandler(this.checkBox3_Click);
+            this.ckOutrasRedes.AutoSize = true;
+            this.ckOutrasRedes.BackColor = System.Drawing.Color.White;
+            this.ckOutrasRedes.Font = new System.Drawing.Font("Franklin Gothic Medium", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ckOutrasRedes.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.ckOutrasRedes.Location = new System.Drawing.Point(461, 206);
+            this.ckOutrasRedes.Name = "ckOutrasRedes";
+            this.ckOutrasRedes.Size = new System.Drawing.Size(64, 19);
+            this.ckOutrasRedes.TabIndex = 23;
+            this.ckOutrasRedes.Text = "Outros";
+            this.ckOutrasRedes.UseVisualStyleBackColor = false;
+            this.ckOutrasRedes.Click += new System.EventHandler(this.checkBox3_Click);
             // 
-            // textBox2
+            // txtNomeOutraRede
             // 
-            this.textBox2.BackColor = System.Drawing.Color.White;
-            this.textBox2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.textBox2.Location = new System.Drawing.Point(629, 206);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(125, 20);
-            this.textBox2.TabIndex = 24;
-            this.textBox2.Visible = false;
+            this.txtNomeOutraRede.BackColor = System.Drawing.Color.White;
+            this.txtNomeOutraRede.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.txtNomeOutraRede.Location = new System.Drawing.Point(629, 206);
+            this.txtNomeOutraRede.Name = "txtNomeOutraRede";
+            this.txtNomeOutraRede.Size = new System.Drawing.Size(125, 20);
+            this.txtNomeOutraRede.TabIndex = 24;
+            this.txtNomeOutraRede.Visible = false;
             // 
             // label5
             // 
@@ -215,84 +215,84 @@
             this.label7.TabIndex = 26;
             this.label7.Text = "Quais jogos você utiliza: ";
             // 
-            // checkBox4
+            // ckMinecraft
             // 
-            this.checkBox4.AutoSize = true;
-            this.checkBox4.BackColor = System.Drawing.Color.White;
-            this.checkBox4.Font = new System.Drawing.Font("Franklin Gothic Medium", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.checkBox4.Location = new System.Drawing.Point(201, 256);
-            this.checkBox4.Name = "checkBox4";
-            this.checkBox4.Size = new System.Drawing.Size(81, 19);
-            this.checkBox4.TabIndex = 27;
-            this.checkBox4.Text = "Minecraft";
-            this.checkBox4.UseVisualStyleBackColor = false;
+            this.ckMinecraft.AutoSize = true;
+            this.ckMinecraft.BackColor = System.Drawing.Color.White;
+            this.ckMinecraft.Font = new System.Drawing.Font("Franklin Gothic Medium", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ckMinecraft.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.ckMinecraft.Location = new System.Drawing.Point(201, 256);
+            this.ckMinecraft.Name = "ckMinecraft";
+            this.ckMinecraft.Size = new System.Drawing.Size(81, 19);
+            this.ckMinecraft.TabIndex = 27;
+            this.ckMinecraft.Text = "Minecraft";
+            this.ckMinecraft.UseVisualStyleBackColor = false;
             // 
-            // checkBox5
+            // ckRoblox
             // 
-            this.checkBox5.AutoSize = true;
-            this.checkBox5.BackColor = System.Drawing.Color.White;
-            this.checkBox5.Font = new System.Drawing.Font("Franklin Gothic Medium", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.checkBox5.Location = new System.Drawing.Point(201, 282);
-            this.checkBox5.Name = "checkBox5";
-            this.checkBox5.Size = new System.Drawing.Size(65, 19);
-            this.checkBox5.TabIndex = 28;
-            this.checkBox5.Text = "Roblox";
-            this.checkBox5.UseVisualStyleBackColor = false;
+            this.ckRoblox.AutoSize = true;
+            this.ckRoblox.BackColor = System.Drawing.Color.White;
+            this.ckRoblox.Font = new System.Drawing.Font("Franklin Gothic Medium", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ckRoblox.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.ckRoblox.Location = new System.Drawing.Point(201, 282);
+            this.ckRoblox.Name = "ckRoblox";
+            this.ckRoblox.Size = new System.Drawing.Size(65, 19);
+            this.ckRoblox.TabIndex = 28;
+            this.ckRoblox.Text = "Roblox";
+            this.ckRoblox.UseVisualStyleBackColor = false;
             // 
-            // checkBox6
+            // ckFreeFire
             // 
-            this.checkBox6.AutoSize = true;
-            this.checkBox6.BackColor = System.Drawing.Color.White;
-            this.checkBox6.Font = new System.Drawing.Font("Franklin Gothic Medium", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox6.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.checkBox6.Location = new System.Drawing.Point(288, 254);
-            this.checkBox6.Name = "checkBox6";
-            this.checkBox6.Size = new System.Drawing.Size(79, 19);
-            this.checkBox6.TabIndex = 29;
-            this.checkBox6.Text = "Free Fire";
-            this.checkBox6.UseVisualStyleBackColor = false;
+            this.ckFreeFire.AutoSize = true;
+            this.ckFreeFire.BackColor = System.Drawing.Color.White;
+            this.ckFreeFire.Font = new System.Drawing.Font("Franklin Gothic Medium", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ckFreeFire.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.ckFreeFire.Location = new System.Drawing.Point(288, 254);
+            this.ckFreeFire.Name = "ckFreeFire";
+            this.ckFreeFire.Size = new System.Drawing.Size(79, 19);
+            this.ckFreeFire.TabIndex = 29;
+            this.ckFreeFire.Text = "Free Fire";
+            this.ckFreeFire.UseVisualStyleBackColor = false;
             // 
-            // checkBox7
+            // ckSubway
             // 
-            this.checkBox7.AutoSize = true;
-            this.checkBox7.BackColor = System.Drawing.Color.White;
-            this.checkBox7.Font = new System.Drawing.Font("Franklin Gothic Medium", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox7.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.checkBox7.Location = new System.Drawing.Point(288, 279);
-            this.checkBox7.Name = "checkBox7";
-            this.checkBox7.Size = new System.Drawing.Size(113, 19);
-            this.checkBox7.TabIndex = 30;
-            this.checkBox7.Text = "Subway Surfers";
-            this.checkBox7.UseVisualStyleBackColor = false;
+            this.ckSubway.AutoSize = true;
+            this.ckSubway.BackColor = System.Drawing.Color.White;
+            this.ckSubway.Font = new System.Drawing.Font("Franklin Gothic Medium", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ckSubway.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.ckSubway.Location = new System.Drawing.Point(288, 279);
+            this.ckSubway.Name = "ckSubway";
+            this.ckSubway.Size = new System.Drawing.Size(113, 19);
+            this.ckSubway.TabIndex = 30;
+            this.ckSubway.Text = "Subway Surfers";
+            this.ckSubway.UseVisualStyleBackColor = false;
             // 
-            // checkBox8
+            // ckStumble
             // 
-            this.checkBox8.AutoSize = true;
-            this.checkBox8.BackColor = System.Drawing.Color.White;
-            this.checkBox8.Font = new System.Drawing.Font("Franklin Gothic Medium", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox8.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.checkBox8.Location = new System.Drawing.Point(407, 254);
-            this.checkBox8.Name = "checkBox8";
-            this.checkBox8.Size = new System.Drawing.Size(104, 19);
-            this.checkBox8.TabIndex = 31;
-            this.checkBox8.Text = "Stumble Guys";
-            this.checkBox8.UseVisualStyleBackColor = false;
+            this.ckStumble.AutoSize = true;
+            this.ckStumble.BackColor = System.Drawing.Color.White;
+            this.ckStumble.Font = new System.Drawing.Font("Franklin Gothic Medium", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ckStumble.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.ckStumble.Location = new System.Drawing.Point(407, 254);
+            this.ckStumble.Name = "ckStumble";
+            this.ckStumble.Size = new System.Drawing.Size(104, 19);
+            this.ckStumble.TabIndex = 31;
+            this.ckStumble.Text = "Stumble Guys";
+            this.ckStumble.UseVisualStyleBackColor = false;
             // 
-            // checkBox9
+            // ckOutrosJogos
             // 
-            this.checkBox9.AutoSize = true;
-            this.checkBox9.BackColor = System.Drawing.Color.White;
-            this.checkBox9.Font = new System.Drawing.Font("Franklin Gothic Medium", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox9.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.checkBox9.Location = new System.Drawing.Point(407, 279);
-            this.checkBox9.Name = "checkBox9";
-            this.checkBox9.Size = new System.Drawing.Size(64, 19);
-            this.checkBox9.TabIndex = 32;
-            this.checkBox9.Text = "Outros";
-            this.checkBox9.UseVisualStyleBackColor = false;
-            this.checkBox9.Click += new System.EventHandler(this.checkBox9_Click);
+            this.ckOutrosJogos.AutoSize = true;
+            this.ckOutrosJogos.BackColor = System.Drawing.Color.White;
+            this.ckOutrosJogos.Font = new System.Drawing.Font("Franklin Gothic Medium", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ckOutrosJogos.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.ckOutrosJogos.Location = new System.Drawing.Point(407, 279);
+            this.ckOutrosJogos.Name = "ckOutrosJogos";
+            this.ckOutrosJogos.Size = new System.Drawing.Size(64, 19);
+            this.ckOutrosJogos.TabIndex = 32;
+            this.ckOutrosJogos.Text = "Outros";
+            this.ckOutrosJogos.UseVisualStyleBackColor = false;
+            this.ckOutrosJogos.Click += new System.EventHandler(this.checkBox9_Click);
             // 
             // label8
             // 
@@ -307,15 +307,15 @@
             this.label8.Text = "Digite o nome:";
             this.label8.Visible = false;
             // 
-            // textBox3
+            // txtOutrosJogos
             // 
-            this.textBox3.BackColor = System.Drawing.Color.White;
-            this.textBox3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.textBox3.Location = new System.Drawing.Point(611, 278);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(125, 20);
-            this.textBox3.TabIndex = 33;
-            this.textBox3.Visible = false;
+            this.txtOutrosJogos.BackColor = System.Drawing.Color.White;
+            this.txtOutrosJogos.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.txtOutrosJogos.Location = new System.Drawing.Point(611, 278);
+            this.txtOutrosJogos.Name = "txtOutrosJogos";
+            this.txtOutrosJogos.Size = new System.Drawing.Size(125, 20);
+            this.txtOutrosJogos.TabIndex = 33;
+            this.txtOutrosJogos.Visible = false;
             // 
             // button1
             // 
@@ -341,25 +341,25 @@
             this.ClientSize = new System.Drawing.Size(800, 394);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.checkBox9);
-            this.Controls.Add(this.checkBox8);
-            this.Controls.Add(this.checkBox7);
-            this.Controls.Add(this.checkBox6);
-            this.Controls.Add(this.checkBox5);
-            this.Controls.Add(this.checkBox4);
+            this.Controls.Add(this.txtOutrosJogos);
+            this.Controls.Add(this.ckOutrosJogos);
+            this.Controls.Add(this.ckStumble);
+            this.Controls.Add(this.ckSubway);
+            this.Controls.Add(this.ckFreeFire);
+            this.Controls.Add(this.ckRoblox);
+            this.Controls.Add(this.ckMinecraft);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.checkBox3);
-            this.Controls.Add(this.checkBox2);
-            this.Controls.Add(this.checkBox1);
+            this.Controls.Add(this.txtNomeOutraRede);
+            this.Controls.Add(this.ckOutrasRedes);
+            this.Controls.Add(this.ckTikTok);
+            this.Controls.Add(this.ckYoutube);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.comboBox2);
+            this.Controls.Add(this.cbInternet);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cbPossuiCelular);
             this.Controls.Add(this.label1);
             this.Name = "questionario_Tempo";
             this.Text = "Questionario";
@@ -370,26 +370,26 @@
 
         #endregion
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cbPossuiCelular;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox cbInternet;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.CheckBox checkBox3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.CheckBox ckYoutube;
+        private System.Windows.Forms.CheckBox ckTikTok;
+        private System.Windows.Forms.CheckBox ckOutrasRedes;
+        private System.Windows.Forms.TextBox txtNomeOutraRede;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.CheckBox checkBox4;
-        private System.Windows.Forms.CheckBox checkBox5;
-        private System.Windows.Forms.CheckBox checkBox6;
-        private System.Windows.Forms.CheckBox checkBox7;
-        private System.Windows.Forms.CheckBox checkBox8;
-        private System.Windows.Forms.CheckBox checkBox9;
+        private System.Windows.Forms.CheckBox ckMinecraft;
+        private System.Windows.Forms.CheckBox ckRoblox;
+        private System.Windows.Forms.CheckBox ckFreeFire;
+        private System.Windows.Forms.CheckBox ckSubway;
+        private System.Windows.Forms.CheckBox ckStumble;
+        private System.Windows.Forms.CheckBox ckOutrosJogos;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtOutrosJogos;
         private System.Windows.Forms.Button button1;
     }
 }
