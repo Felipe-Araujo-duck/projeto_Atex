@@ -62,6 +62,14 @@
     <Compile Include="cadastro.Designer.cs">
       <DependentUpon>cadastro.cs</DependentUpon>
     </Compile>
+    <Compile Include="Data\DataTools.cs" />
+    <Compile Include="Data\Entity\Crianca.cs" />
+    <Compile Include="Data\Entity\Escola.cs" />
+    <Compile Include="Data\Entity\CriancaJogoRedeSocial.cs" />
+    <Compile Include="Data\Entity\JogoRedeSocial.cs" />
+    <Compile Include="Data\Entity\OutroJogoRedeSocial.cs" />
+    <Compile Include="Data\Entity\Questionario.cs" />
+    <Compile Include="Data\Entity\Responsavel.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
