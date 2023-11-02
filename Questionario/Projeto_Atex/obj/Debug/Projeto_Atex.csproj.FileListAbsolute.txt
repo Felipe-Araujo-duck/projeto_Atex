@@ -31,3 +31,20 @@ C:\Users\Aluno\source\repos\projeto_Atex\Questionario\Projeto_Atex\obj\Debug\Pro
 C:\Users\Aluno\source\repos\projeto_Atex\Questionario\Projeto_Atex\obj\Debug\Projeto_Atex.csproj.CopyComplete
 C:\Users\Aluno\source\repos\projeto_Atex\Questionario\Projeto_Atex\obj\Debug\Projeto_Atex.exe
 C:\Users\Aluno\source\repos\projeto_Atex\Questionario\Projeto_Atex\obj\Debug\Projeto_Atex.pdb
+C:\Users\João Pedro\source\repos\projeto_Atex\Questionario\Projeto_Atex\bin\Debug\Projeto_Atex.exe.config
+C:\Users\João Pedro\source\repos\projeto_Atex\Questionario\Projeto_Atex\bin\Debug\Projeto_Atex.exe
+C:\Users\João Pedro\source\repos\projeto_Atex\Questionario\Projeto_Atex\bin\Debug\Projeto_Atex.pdb
+C:\Users\João Pedro\source\repos\projeto_Atex\Questionario\Projeto_Atex\bin\Debug\MetroFramework.dll
+C:\Users\João Pedro\source\repos\projeto_Atex\Questionario\Projeto_Atex\bin\Debug\MetroFramework.Fonts.dll
+C:\Users\João Pedro\source\repos\projeto_Atex\Questionario\Projeto_Atex\obj\Debug\Projeto_Atex.csproj.AssemblyReference.cache
+C:\Users\João Pedro\source\repos\projeto_Atex\Questionario\Projeto_Atex\obj\Debug\Projeto_Atex.csproj.SuggestedBindingRedirects.cache
+C:\Users\João Pedro\source\repos\projeto_Atex\Questionario\Projeto_Atex\obj\Debug\Projeto_Atex.cadastro.resources
+C:\Users\João Pedro\source\repos\projeto_Atex\Questionario\Projeto_Atex\obj\Debug\Projeto_Atex.Form1.resources
+C:\Users\João Pedro\source\repos\projeto_Atex\Questionario\Projeto_Atex\obj\Debug\Projeto_Atex.Properties.Resources.resources
+C:\Users\João Pedro\source\repos\projeto_Atex\Questionario\Projeto_Atex\obj\Debug\Projeto_Atex.questionario_Tempo.resources
+C:\Users\João Pedro\source\repos\projeto_Atex\Questionario\Projeto_Atex\obj\Debug\Projeto_Atex.Relatorios.resources
+C:\Users\João Pedro\source\repos\projeto_Atex\Questionario\Projeto_Atex\obj\Debug\Projeto_Atex.csproj.GenerateResource.cache
+C:\Users\João Pedro\source\repos\projeto_Atex\Questionario\Projeto_Atex\obj\Debug\Projeto_Atex.csproj.CoreCompileInputs.cache
+C:\Users\João Pedro\source\repos\projeto_Atex\Questionario\Projeto_Atex\obj\Debug\Projeto_Atex.csproj.CopyComplete
+C:\Users\João Pedro\source\repos\projeto_Atex\Questionario\Projeto_Atex\obj\Debug\Projeto_Atex.exe
+C:\Users\João Pedro\source\repos\projeto_Atex\Questionario\Projeto_Atex\obj\Debug\Projeto_Atex.pdb

@@ -13,5 +13,7 @@ namespace Projeto_Atex.Data.Entity
         public DateTime DataNascimento { get; set; }
         public int IdResponsavel { get; set; }
         public int IdEscola { get; set; }
+        public List<string> JogoRedeSocial { get; set; }
+        public List<string> OutroJogoRedeSocial { get; set; }
     }
 }
