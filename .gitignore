@@ -71,7 +71,11 @@ npm-debug.log
 # Ignorar diretório de compilação do Xamarin
 bin/
 obj/
+Questionario/Projeto_Atex/bin/
+Questionario/Projeto_Atex/obj/
 
 # Ignorar diretório de compilação do .NET Core
 bin/
 obj/
+Questionario/Projeto_Atex/bin/
+Questionario/Projeto_Atex/obj/
