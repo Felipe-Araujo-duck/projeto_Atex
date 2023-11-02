@@ -74,13 +74,23 @@ namespace Projeto_Atex
             if(cbPossuiCelular.Text.Equals("Sim"))
                 questionario.PossuiCelularProprio = 1;
             questionario.TempoUsoDiario = int.Parse(txtTempoDeUso.Text);
-            string sql = $@"INSERT INTO Questionario 
-                            (idCrianca, dataQuestionario, possuiCelularProprio, acessoInternet, tempoUsoDiario, recebeMonitoramento) 
-                            VALUES ('{crianca.IdCrianca}', '{DateTime.Now.Date}', '{questionario.PossuiCelularProprio}', '{questionario.AcessoInternet}', '{questionario.TempoUsoDiario}', '{questionario.RecebeMonitoramento}')";
+            string dateNow = DateTime.Now.ToString("yyyy-MM-dd");
+
+            int idCrianca;
+            string sqlCrianca = $"SELECT TOP(1) idCrianca FROM Crianca WHERE idResponsavel='{crianca.IdResponsavel}'";
+            SqlCommand cmdCri = _tools.GetCommand(sqlCrianca, _connection);
+            _connection.Open();
+            SqlDataReader readert = cmdCri.ExecuteReader();
+            readert.Read();
+            idCrianca = int.Parse(readert["idCrianca"].ToString());
+            _connection.Close();
+            crianca.IdCrianca = idCrianca;
+
+            string sql = $"INSERT INTO Questionario (idCrianca, dataQuestionario, possuiCelularProprio, acessoInternet, tempoUsoDiario, recebeMonitoramento) VALUES ('{idCrianca}', '{dateNow}', '{questionario.PossuiCelularProprio}', '{questionario.AcessoInternet}', '{questionario.TempoUsoDiario}', '{questionario.RecebeMonitoramento}')";
             _tools.ExecuteNonQuery(sql);
 
             int idQuestionario;
-            string sqlQuestionario = $"SELECT TOP(1) idQuestionario FROM Responsavel WHERE idCrianca='{crianca.IdCrianca}'";
+            string sqlQuestionario = $"SELECT TOP(1) idQuestionario FROM Questionario WHERE idCrianca='{idCrianca}'";
             SqlCommand cmd = _tools.GetCommand(sqlQuestionario, _connection);
             _connection.Open();
             SqlDataReader reader = cmd.ExecuteReader();
@@ -135,7 +145,7 @@ namespace Projeto_Atex
 
             foreach(var item in aux)
             {
-                string sql = $"INSERT INTO CriancaJogoRedeSocial (idCrianca, idJogoRedeSocial) values ('{crianca.IdCrianca}', '{item}', '{idQuestionario}')";
+                string sql = $"INSERT INTO CriancaJogoRedeSocial (idJogoRedeSocial, idQuestionario) values ('{item}', '{idQuestionario}')";
                 _tools.ExecuteNonQuery(sql);
             }
         }
@@ -144,7 +154,7 @@ namespace Projeto_Atex
         {
             if(ckOutrosJogos.Checked)
             {
-                string sql = $"INSERT INTO OutroJogoRedeSocial (nome, tipo, idQuestionario) VALUES('{txtOutrosJogos.Text}', 'Jogo')";
+                string sql = $"INSERT INTO OutroJogoRedeSocial (nome, tipo, idQuestionario) VALUES('{txtOutrosJogos.Text}', 'Jogo', '{idQuestionario}')";
                 _tools.ExecuteNonQuery(sql);
             }
             if (ckOutrasRedes.Checked)
