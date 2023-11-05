@@ -91,7 +91,7 @@ namespace Projeto_Atex.Data
             return jrs;
         }
 
-        public List<CriancaQuestionario> AltualizarDbSet(SqlConnection conn)
+        public List<CriancaQuestionario> AtualizarDbSet(SqlConnection conn)
         {
             CriancaQuestionario c = new CriancaQuestionario();
             conn.Open();

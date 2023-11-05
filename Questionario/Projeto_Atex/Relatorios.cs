@@ -47,7 +47,7 @@ namespace Projeto_Atex
             _tools = new DataTools();
             SqlConnection conn = _tools.ConnectionDB();
             List<CriancaQuestionario> list = new List<CriancaQuestionario>();
-            list = _tools.AltualizarDbSet(conn);
+            list = _tools.AtualizarDbSet(conn);
             string listaJogosRedesSociais = "NULL";
             string listaOutrosJogosRedesSociais = "NULL";
             foreach (var crianca in list)
