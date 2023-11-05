@@ -32,18 +32,18 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtNomeResponsavel = new System.Windows.Forms.TextBox();
+            this.txtTelefone = new System.Windows.Forms.TextBox();
+            this.txtEmail = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.txtNome = new System.Windows.Forms.TextBox();
+            this.dataNascimento = new System.Windows.Forms.DateTimePicker();
             this.label5 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cbEscola = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.cbMonitoramento = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // label1
@@ -82,36 +82,36 @@
             this.label3.TabIndex = 2;
             this.label3.Text = "Email:";
             // 
-            // textBox1
+            // txtNomeResponsavel
             // 
-            this.textBox1.BackColor = System.Drawing.Color.White;
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.ForeColor = System.Drawing.Color.Black;
-            this.textBox1.Location = new System.Drawing.Point(168, 79);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(581, 20);
-            this.textBox1.TabIndex = 3;
+            this.txtNomeResponsavel.BackColor = System.Drawing.Color.White;
+            this.txtNomeResponsavel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtNomeResponsavel.ForeColor = System.Drawing.Color.Black;
+            this.txtNomeResponsavel.Location = new System.Drawing.Point(168, 79);
+            this.txtNomeResponsavel.Name = "txtNomeResponsavel";
+            this.txtNomeResponsavel.Size = new System.Drawing.Size(581, 20);
+            this.txtNomeResponsavel.TabIndex = 3;
             // 
-            // textBox2
+            // txtTelefone
             // 
-            this.textBox2.BackColor = System.Drawing.Color.White;
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.textBox2.Location = new System.Drawing.Point(480, 121);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(269, 20);
-            this.textBox2.TabIndex = 4;
+            this.txtTelefone.BackColor = System.Drawing.Color.White;
+            this.txtTelefone.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtTelefone.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.txtTelefone.Location = new System.Drawing.Point(480, 121);
+            this.txtTelefone.Multiline = true;
+            this.txtTelefone.Name = "txtTelefone";
+            this.txtTelefone.Size = new System.Drawing.Size(269, 20);
+            this.txtTelefone.TabIndex = 4;
             // 
-            // textBox3
+            // txtEmail
             // 
-            this.textBox3.BackColor = System.Drawing.Color.White;
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox3.ForeColor = System.Drawing.Color.Black;
-            this.textBox3.Location = new System.Drawing.Point(72, 117);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(325, 20);
-            this.textBox3.TabIndex = 5;
+            this.txtEmail.BackColor = System.Drawing.Color.White;
+            this.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtEmail.ForeColor = System.Drawing.Color.Black;
+            this.txtEmail.Location = new System.Drawing.Point(72, 117);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(325, 20);
+            this.txtEmail.TabIndex = 5;
             // 
             // label4
             // 
@@ -125,23 +125,23 @@
             this.label4.TabIndex = 6;
             this.label4.Text = "Nome da Criança:";
             // 
-            // textBox4
+            // txtNome
             // 
-            this.textBox4.BackColor = System.Drawing.Color.White;
-            this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox4.ForeColor = System.Drawing.Color.Black;
-            this.textBox4.Location = new System.Drawing.Point(140, 168);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(257, 20);
-            this.textBox4.TabIndex = 7;
+            this.txtNome.BackColor = System.Drawing.Color.White;
+            this.txtNome.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtNome.ForeColor = System.Drawing.Color.Black;
+            this.txtNome.Location = new System.Drawing.Point(140, 168);
+            this.txtNome.Name = "txtNome";
+            this.txtNome.Size = new System.Drawing.Size(257, 20);
+            this.txtNome.TabIndex = 7;
             // 
-            // dateTimePicker1
+            // dataNascimento
             // 
-            this.dateTimePicker1.CalendarMonthBackground = System.Drawing.Color.LightGray;
-            this.dateTimePicker1.Location = new System.Drawing.Point(549, 168);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 8;
+            this.dataNascimento.CalendarMonthBackground = System.Drawing.Color.LightGray;
+            this.dataNascimento.Location = new System.Drawing.Point(549, 168);
+            this.dataNascimento.Name = "dataNascimento";
+            this.dataNascimento.Size = new System.Drawing.Size(200, 20);
+            this.dataNascimento.TabIndex = 8;
             // 
             // label5
             // 
@@ -182,19 +182,19 @@
             this.label7.TabIndex = 12;
             this.label7.Text = "Escola:";
             // 
-            // comboBox1
+            // cbEscola
             // 
-            this.comboBox1.BackColor = System.Drawing.Color.LightGray;
-            this.comboBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.comboBox1.ForeColor = System.Drawing.Color.Black;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.cbEscola.BackColor = System.Drawing.Color.LightGray;
+            this.cbEscola.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cbEscola.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.cbEscola.ForeColor = System.Drawing.Color.Black;
+            this.cbEscola.FormattingEnabled = true;
+            this.cbEscola.Items.AddRange(new object[] {
             "Colegio Atenas"});
-            this.comboBox1.Location = new System.Drawing.Point(78, 219);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(195, 21);
-            this.comboBox1.TabIndex = 13;
+            this.cbEscola.Location = new System.Drawing.Point(78, 219);
+            this.cbEscola.Name = "cbEscola";
+            this.cbEscola.Size = new System.Drawing.Size(195, 21);
+            this.cbEscola.TabIndex = 13;
             // 
             // label8
             // 
@@ -208,20 +208,20 @@
             this.label8.Text = "Pai ou Responsavel, realiza monitoramento da criança com o uso das redes socias e" +
     " jogos:";
             // 
-            // comboBox2
+            // cbMonitoramento
             // 
-            this.comboBox2.BackColor = System.Drawing.Color.LightGray;
-            this.comboBox2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.comboBox2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.comboBox2.ForeColor = System.Drawing.Color.Black;
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
+            this.cbMonitoramento.BackColor = System.Drawing.Color.LightGray;
+            this.cbMonitoramento.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cbMonitoramento.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.cbMonitoramento.ForeColor = System.Drawing.Color.Black;
+            this.cbMonitoramento.FormattingEnabled = true;
+            this.cbMonitoramento.Items.AddRange(new object[] {
             "Sim",
             "Não"});
-            this.comboBox2.Location = new System.Drawing.Point(233, 288);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(147, 21);
-            this.comboBox2.TabIndex = 15;
+            this.cbMonitoramento.Location = new System.Drawing.Point(233, 288);
+            this.cbMonitoramento.Name = "cbMonitoramento";
+            this.cbMonitoramento.Size = new System.Drawing.Size(147, 21);
+            this.cbMonitoramento.TabIndex = 15;
             // 
             // cadastro
             // 
@@ -230,25 +230,25 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(800, 363);
-            this.Controls.Add(this.comboBox2);
+            this.Controls.Add(this.cbMonitoramento);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cbEscola);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.dataNascimento);
+            this.Controls.Add(this.txtNome);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtEmail);
+            this.Controls.Add(this.txtTelefone);
+            this.Controls.Add(this.txtNomeResponsavel);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "cadastro";
             this.Text = "Area de Cadastro";
             this.Load += new System.EventHandler(this.cadastro_Load);
-            this.ResumeLayout(false);
+            this.ResumeLayout(true);
             this.PerformLayout();
 
         }
@@ -258,17 +258,17 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtNomeResponsavel;
+        private System.Windows.Forms.TextBox txtTelefone;
+        private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.TextBox txtNome;
+        private System.Windows.Forms.DateTimePicker dataNascimento;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cbEscola;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox cbMonitoramento;
     }
 }
