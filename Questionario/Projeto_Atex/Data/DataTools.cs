@@ -81,7 +81,7 @@ namespace Projeto_Atex.Data
                 c = new Crianca();
                 c.IdCrianca = reader.GetInt32(0);           
                 c.Nome = reader.GetString(1);
-                c.DataNascimento = reader.GetDateTime(2);
+                c.DataNascimento = reader.GetDateTime(2).ToString("dd/MM/yyyy");
                 c.IdResponsavel = reader.GetInt32(3);
                 c.IdEscola = reader.GetInt32(4);
                 c.JogoRedeSocial = GetJogoRedeSocials(c.IdCrianca);
