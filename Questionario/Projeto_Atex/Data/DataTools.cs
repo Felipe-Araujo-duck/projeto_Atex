@@ -48,7 +48,28 @@ namespace Projeto_Atex.Data
             return set;
         }
 
-        public List<string> GetJogoRedeSocials(int idCrianca) 
+        public List<string> GetOutroJogoRedeSocial(int idCrianca)
+        {
+            DataTools _tools = new DataTools();
+            SqlConnection conn = _tools.ConnectionDB();
+            conn.Open();
+            List<string> list = new List<string>();
+            SqlCommand command = new SqlCommand($"select cr.idCrianca, ojr.nome " +
+                $"from OutroJogoRedeSocial ojr " +
+                $"inner join Questionario q on ojr.idQuestionario = q.idQuestionario " +
+                $"inner join Crianca cr on cr.idCrianca = q.idCrianca " +
+                $"where cr.idCrianca = {idCrianca}");
+            command.Connection = conn;
+            SqlDataReader reader = command.ExecuteReader();
+            while (reader.Read())
+            {
+                list.Add(reader.GetString(1));
+            }
+            conn.Close();
+            return list;
+        }
+
+        public List<string> GetJogoRedeSociais(int idCrianca) 
         {
             DataTools _tools= new DataTools();
             SqlConnection conn = _tools.ConnectionDB();
@@ -56,7 +77,9 @@ namespace Projeto_Atex.Data
             List<string> jrs = new List<string>();
             SqlCommand command = new SqlCommand($"select cr.idCrianca, jr.nome " +
                 $"from JogoRedeSocial jr " +
-                $"inner join CriancaJogoRedeSocial cr on cr.idJogoRedeSocial = jr.idJogoRedeSocial " +
+                $"inner join CriancaJogoRedeSocial cjr on cjr.idJogoRedeSocial = jr.idJogoRedeSocial " +
+                $"inner join Questionario q on cjr.idQuestionario = q.idQuestionario " +
+                $"inner join Crianca cr on cr.idCrianca = q.idCrianca " +
                 $"where cr.idCrianca = {idCrianca}");
             command.Connection = conn;
             SqlDataReader reader = command.ExecuteReader();
@@ -68,24 +91,30 @@ namespace Projeto_Atex.Data
             return jrs;
         }
 
-        public List<Crianca> PesquisaDbSet(SqlConnection conn)
+        public List<CriancaQuestionario> AltualizarDbSet(SqlConnection conn)
         {
-            Crianca c = new Crianca();
+            CriancaQuestionario c = new CriancaQuestionario();
             conn.Open();
-            List<Crianca> criancas= new List<Crianca>();
-            SqlCommand command = new SqlCommand("Select * From Crianca");
+            List<CriancaQuestionario> criancas= new List<CriancaQuestionario>();
+            SqlCommand command = new SqlCommand("Select * From Atualizar");
             command.Connection = conn;
             SqlDataReader reader = command.ExecuteReader();
             while (reader.Read())
             {
-                c = new Crianca();
+                c = new CriancaQuestionario();
                 c.IdCrianca = reader.GetInt32(0);           
                 c.Nome = reader.GetString(1);
-                c.DataNascimento = reader.GetDateTime(2).ToString("dd/MM/yyyy");
-                c.IdResponsavel = reader.GetInt32(3);
-                c.IdEscola = reader.GetInt32(4);
-                c.JogoRedeSocial = GetJogoRedeSocials(c.IdCrianca);
-                criancas.Add(c);
+                c.DataQuestionario = reader.GetDateTime(2).ToString("dd/MM/yyyy");
+                c.PossuiCelularProprioSet = reader.GetInt16(3);
+                c.AcessoInternetSet = reader.GetInt16(4);
+                c.TempoUsoDiario = reader.GetInt32(5);
+                c.RecebeMonitoramentoSet = reader.GetInt32(6);
+                c.JogoRedeSocial = GetJogoRedeSociais(c.IdCrianca);
+                c.OutroJogoRedeSocial = GetOutroJogoRedeSocial(c.IdCrianca);
+                if (criancas.Any(x => x.IdCrianca == c.IdCrianca))
+                    continue;
+                else
+                    criancas.Add(c);
             }
             conn.Close();
             return criancas;

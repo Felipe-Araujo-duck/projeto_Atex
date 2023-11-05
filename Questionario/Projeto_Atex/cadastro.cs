@@ -21,13 +21,13 @@ namespace Projeto_Atex
         {
             InitializeComponent();
             responsavel = new Responsavel();
-            crianca = new Crianca();
+            crianca = new CriancaQuestionario();
             questionario = new Questionario();
             _tools = new DataTools();
         }
         private DataTools _tools;
         private Responsavel responsavel;
-        public Crianca crianca;
+        public CriancaQuestionario crianca;
         public Questionario questionario;
 
         private void button1_Click(object sender, EventArgs e)

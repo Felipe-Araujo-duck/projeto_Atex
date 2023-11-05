@@ -31,11 +31,11 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Relatorios));
             this.metroTabControl1 = new MetroFramework.Controls.MetroTabControl();
             this.tabCrianca = new MetroFramework.Controls.MetroTabPage();
+            this.lstCriancas = new System.Windows.Forms.ListView();
             this.btnAtualizar = new MetroFramework.Controls.MetroButton();
             this.btnPesquisar = new MetroFramework.Controls.MetroButton();
             this.txtPesquisa = new MetroFramework.Controls.MetroTextBox();
             this.tabEscola = new MetroFramework.Controls.MetroTabPage();
-            this.lstCriancas = new System.Windows.Forms.ListView();
             this.metroTabControl1.SuspendLayout();
             this.tabCrianca.SuspendLayout();
             this.SuspendLayout();
@@ -47,7 +47,7 @@
             this.metroTabControl1.Location = new System.Drawing.Point(11, 48);
             this.metroTabControl1.Name = "metroTabControl1";
             this.metroTabControl1.SelectedIndex = 0;
-            this.metroTabControl1.Size = new System.Drawing.Size(780, 405);
+            this.metroTabControl1.Size = new System.Drawing.Size(1074, 590);
             this.metroTabControl1.TabIndex = 0;
             // 
             // tabCrianca
@@ -59,14 +59,25 @@
             this.tabCrianca.HorizontalScrollbarBarColor = true;
             this.tabCrianca.Location = new System.Drawing.Point(4, 35);
             this.tabCrianca.Name = "tabCrianca";
-            this.tabCrianca.Size = new System.Drawing.Size(772, 366);
+            this.tabCrianca.Size = new System.Drawing.Size(1066, 551);
             this.tabCrianca.TabIndex = 0;
             this.tabCrianca.Text = "Criança";
             this.tabCrianca.VerticalScrollbarBarColor = true;
             // 
+            // lstCriancas
+            // 
+            this.lstCriancas.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lstCriancas.HideSelection = false;
+            this.lstCriancas.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.lstCriancas.Location = new System.Drawing.Point(12, 49);
+            this.lstCriancas.Name = "lstCriancas";
+            this.lstCriancas.Size = new System.Drawing.Size(1021, 499);
+            this.lstCriancas.TabIndex = 6;
+            this.lstCriancas.UseCompatibleStateImageBehavior = false;
+            // 
             // btnAtualizar
             // 
-            this.btnAtualizar.Location = new System.Drawing.Point(647, 9);
+            this.btnAtualizar.Location = new System.Drawing.Point(937, 9);
             this.btnAtualizar.Name = "btnAtualizar";
             this.btnAtualizar.Size = new System.Drawing.Size(94, 30);
             this.btnAtualizar.TabIndex = 5;
@@ -75,7 +86,7 @@
             // 
             // btnPesquisar
             // 
-            this.btnPesquisar.Location = new System.Drawing.Point(526, 9);
+            this.btnPesquisar.Location = new System.Drawing.Point(831, 9);
             this.btnPesquisar.Name = "btnPesquisar";
             this.btnPesquisar.Size = new System.Drawing.Size(94, 30);
             this.btnPesquisar.TabIndex = 4;
@@ -86,7 +97,7 @@
             this.txtPesquisa.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.txtPesquisa.Location = new System.Drawing.Point(22, 11);
             this.txtPesquisa.Name = "txtPesquisa";
-            this.txtPesquisa.Size = new System.Drawing.Size(482, 25);
+            this.txtPesquisa.Size = new System.Drawing.Size(791, 25);
             this.txtPesquisa.TabIndex = 3;
             this.txtPesquisa.Text = "Digite o nome da criança";
             // 
@@ -100,23 +111,13 @@
             this.tabEscola.Text = "Escola";
             this.tabEscola.VerticalScrollbarBarColor = true;
             // 
-            // lstCriancas
-            // 
-            this.lstCriancas.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lstCriancas.HideSelection = false;
-            this.lstCriancas.Location = new System.Drawing.Point(22, 45);
-            this.lstCriancas.Name = "lstCriancas";
-            this.lstCriancas.Size = new System.Drawing.Size(719, 299);
-            this.lstCriancas.TabIndex = 6;
-            this.lstCriancas.UseCompatibleStateImageBehavior = false;
-            // 
             // Relatorios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1080, 650);
             this.Controls.Add(this.metroTabControl1);
             this.Name = "Relatorios";
             this.Text = "Relatórios";

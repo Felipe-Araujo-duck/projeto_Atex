@@ -63,7 +63,7 @@
       <DependentUpon>cadastro.cs</DependentUpon>
     </Compile>
     <Compile Include="Data\DataTools.cs" />
-    <Compile Include="Data\Entity\Crianca.cs" />
+    <Compile Include="Data\Entity\CriancaQuestionario.cs" />
     <Compile Include="Data\Entity\Escola.cs" />
     <Compile Include="Data\Entity\CriancaJogoRedeSocial.cs" />
     <Compile Include="Data\Entity\JogoRedeSocial.cs" />
