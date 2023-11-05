@@ -24,9 +24,17 @@ packages/
 *.resources
 
 # Ignorar arquivos de compilação C#
+[Dd]ebug/
+[Dd]ebugPublic/
 [Cc]ache/
 [Oo]bj/
+[Ll]og/
 [Bb]in/
+x64/
+x86/
+bld/
+[Rr]elease/
+[Rr]eleases/
 
 # Ignorar arquivos de configuração
 Web.config

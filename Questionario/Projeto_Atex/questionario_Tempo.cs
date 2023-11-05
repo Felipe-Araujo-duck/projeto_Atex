@@ -159,7 +159,7 @@ namespace Projeto_Atex
             }
             if (ckOutrasRedes.Checked)
             {
-                string sql = $"INSERT INTO OutroJogoRedeSocial (nome, tipo, idQuestionario) VALUES('{txtNomeOutraRede.Text}', 'Jogo', '{idQuestionario}')";
+                string sql = $"INSERT INTO OutroJogoRedeSocial (nome, tipo, idQuestionario) VALUES('{txtNomeOutraRede.Text}', 'Rede Social', '{idQuestionario}')";
                 _tools.ExecuteNonQuery(sql);
             }
         }
