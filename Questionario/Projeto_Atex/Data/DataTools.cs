@@ -114,7 +114,7 @@ namespace Projeto_Atex.Data
                 if (criancas.Any(x => x.IdCrianca == c.IdCrianca))
                     continue;
                 else
-                    criancas.Add(c);
+                    criancas.Add(c);    
             }
             conn.Close();
             return criancas;
