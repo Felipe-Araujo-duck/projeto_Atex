@@ -91,6 +91,7 @@
             this.btnPesquisar.Size = new System.Drawing.Size(94, 30);
             this.btnPesquisar.TabIndex = 4;
             this.btnPesquisar.Text = "Pesquisar";
+            this.btnPesquisar.Click += new System.EventHandler(this.btnPesquisar_Click);
             // 
             // txtPesquisa
             // 
@@ -106,7 +107,7 @@
             this.tabEscola.HorizontalScrollbarBarColor = true;
             this.tabEscola.Location = new System.Drawing.Point(4, 35);
             this.tabEscola.Name = "tabEscola";
-            this.tabEscola.Size = new System.Drawing.Size(772, 366);
+            this.tabEscola.Size = new System.Drawing.Size(1066, 551);
             this.tabEscola.TabIndex = 1;
             this.tabEscola.Text = "Escola";
             this.tabEscola.VerticalScrollbarBarColor = true;

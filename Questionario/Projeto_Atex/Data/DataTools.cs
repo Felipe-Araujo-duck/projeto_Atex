@@ -119,5 +119,34 @@ namespace Projeto_Atex.Data
             conn.Close();
             return criancas;
         }
+
+        public List<CriancaQuestionario> PesquisarDbSet(SqlConnection conn, string pesquisa)
+        {
+            CriancaQuestionario c = new CriancaQuestionario();
+            conn.Open();
+            List<CriancaQuestionario> criancas = new List<CriancaQuestionario>();
+            SqlCommand command = new SqlCommand($"Select * From Atualizar Where nome like '%{pesquisa}%'");
+            command.Connection = conn;
+            SqlDataReader reader = command.ExecuteReader();
+            while (reader.Read())
+            {
+                c = new CriancaQuestionario();
+                c.IdCrianca = reader.GetInt32(0);
+                c.Nome = reader.GetString(1);
+                c.DataQuestionario = reader.GetDateTime(2).ToString("dd/MM/yyyy");
+                c.PossuiCelularProprioSet = reader.GetInt16(3);
+                c.AcessoInternetSet = reader.GetInt16(4);
+                c.TempoUsoDiario = reader.GetInt32(5);
+                c.RecebeMonitoramentoSet = reader.GetInt32(6);
+                c.JogoRedeSocial = GetJogoRedeSociais(c.IdCrianca);
+                c.OutroJogoRedeSocial = GetOutroJogoRedeSocial(c.IdCrianca);
+                if (criancas.Any(x => x.IdCrianca == c.IdCrianca))
+                    continue;
+                else
+                    criancas.Add(c);
+            }
+            conn.Close();
+            return criancas;
+        }
     }
 }

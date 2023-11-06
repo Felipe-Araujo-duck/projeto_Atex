@@ -62,5 +62,28 @@ namespace Projeto_Atex
                 lstCriancas.Items.Add(listViewItem);
             }
         }
+
+        private void btnPesquisar_Click(object sender, EventArgs e)
+        {
+            lstCriancas.Items.Clear();
+            lstCriancas.GridLines = false;
+            _tools = new DataTools();
+            SqlConnection conn = _tools.ConnectionDB();
+            List<CriancaQuestionario> list = new List<CriancaQuestionario>();
+            list = _tools.PesquisarDbSet(conn, txtPesquisa.Text);
+            string listaJogosRedesSociais = "NULL";
+            string listaOutrosJogosRedesSociais = "NULL";
+            foreach (var crianca in list)
+            {
+                if (crianca.JogoRedeSocial != null)
+                    listaJogosRedesSociais = string.Join(", ", crianca.JogoRedeSocial);
+                if (crianca.OutroJogoRedeSocial != null)
+                    listaOutrosJogosRedesSociais = string.Join(", ", crianca.OutroJogoRedeSocial);
+
+                string[] row = { "", crianca.Nome, crianca.DataQuestionario.ToString(), crianca.PossuiCelularProprioGet, crianca.AcessoInternetGet, crianca.TempoUsoDiario.ToString(), crianca.RecebeMonitoramentoGet, listaJogosRedesSociais, listaOutrosJogosRedesSociais };
+                var listViewItem = new ListViewItem(row);
+                lstCriancas.Items.Add(listViewItem);
+            }
+        }
     }
 }
