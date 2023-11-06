@@ -73,7 +73,7 @@ namespace Projeto_Atex
                 questionario.AcessoInternet = 1;
             if(cbPossuiCelular.Text.Equals("Sim"))
                 questionario.PossuiCelularProprio = 1;
-            questionario.TempoUsoDiario = int.Parse(txtTempoDeUso.Text);
+            questionario.TempoUsoDiario = int.Parse(textBox1.Text);
             string dateNow = DateTime.Now.ToString("yyyy-MM-dd");
 
             int idCrianca;
