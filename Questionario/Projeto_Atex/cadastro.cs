@@ -31,6 +31,8 @@ namespace Projeto_Atex
         private Responsavel responsavel;
         public CriancaQuestionario crianca;
         public Questionario questionario;
+        public string textoSemMascara;
+
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -43,7 +45,16 @@ namespace Projeto_Atex
 
                 if (IsValidEmail(email))
                 {
-                    questionario_Tempo Qt = new questionario_Tempo();
+                    responsavel.Nome = txtNomeResponsavel.Text;
+                    responsavel.Telefone = textoSemMascara;
+                    responsavel.Email = txtEmail.Text;
+                    crianca.Nome = txtNome.Text;
+                    crianca.DataNascimento = DateTime.Parse(dataNascimento.Text).ToString("yyyy-MM-dd");
+                    crianca.IdEscola = int.Parse(cbEscola.SelectedValue.ToString());
+                    if (cbMonitoramento.Equals("Sim"))
+                        questionario.RecebeMonitoramento = 1;
+
+                    questionario_Tempo Qt = new questionario_Tempo(responsavel, questionario, crianca);
                     Qt.ShowDialog();
                 }
                 else
@@ -99,7 +110,7 @@ namespace Projeto_Atex
         private void txtTelefone_Leave(object sender, EventArgs e)
         {
             //mandar a variavel textoSemMascara para o banco
-            string textoSemMascara = txtTelefone.Text;
+            textoSemMascara = txtTelefone.Text;
             string numeroFormatado = AplicarMascaraTelefone(textoSemMascara);
             txtTelefone.Text = numeroFormatado;
             txtTelefone.SelectionStart = txtTelefone.Text.Length; // Mover o cursor para o final
