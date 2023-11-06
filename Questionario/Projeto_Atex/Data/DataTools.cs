@@ -14,7 +14,7 @@ namespace Projeto_Atex.Data
         public DataTools()
         {
             Conexao = new SqlConnection();
-            Conexao.ConnectionString = "Server =.\\SQLEXPRESS; Database = PII IV; UID = sa; PWD = Jp28072002;";
+            Conexao.ConnectionString = "Server =.\\SQLEXPRESS; Database = PII IV; UID = sa; PWD = 123;";
         }
         private SqlConnection Conexao { get; set; }
         public SqlConnection ConnectionDB()
