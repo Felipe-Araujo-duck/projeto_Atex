@@ -47,7 +47,7 @@
             this.metroTabControl1.Location = new System.Drawing.Point(11, 48);
             this.metroTabControl1.Name = "metroTabControl1";
             this.metroTabControl1.SelectedIndex = 0;
-            this.metroTabControl1.Size = new System.Drawing.Size(1074, 590);
+            this.metroTabControl1.Size = new System.Drawing.Size(1046, 590);
             this.metroTabControl1.TabIndex = 0;
             // 
             // tabCrianca
@@ -59,7 +59,7 @@
             this.tabCrianca.HorizontalScrollbarBarColor = true;
             this.tabCrianca.Location = new System.Drawing.Point(4, 35);
             this.tabCrianca.Name = "tabCrianca";
-            this.tabCrianca.Size = new System.Drawing.Size(1066, 551);
+            this.tabCrianca.Size = new System.Drawing.Size(1038, 551);
             this.tabCrianca.TabIndex = 0;
             this.tabCrianca.Text = "Criança";
             this.tabCrianca.VerticalScrollbarBarColor = true;
@@ -106,7 +106,7 @@
             this.tabEscola.HorizontalScrollbarBarColor = true;
             this.tabEscola.Location = new System.Drawing.Point(4, 35);
             this.tabEscola.Name = "tabEscola";
-            this.tabEscola.Size = new System.Drawing.Size(772, 366);
+            this.tabEscola.Size = new System.Drawing.Size(1066, 551);
             this.tabEscola.TabIndex = 1;
             this.tabEscola.Text = "Escola";
             this.tabEscola.VerticalScrollbarBarColor = true;
