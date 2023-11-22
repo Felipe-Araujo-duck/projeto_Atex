@@ -33,7 +33,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.cbInternet = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtTempoDeUso = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.ckYoutube = new System.Windows.Forms.CheckBox();
             this.ckTikTok = new System.Windows.Forms.CheckBox();
@@ -58,9 +58,10 @@
             this.label1.BackColor = System.Drawing.Color.White;
             this.label1.Font = new System.Drawing.Font("Franklin Gothic Medium", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label1.Location = new System.Drawing.Point(12, 97);
+            this.label1.Location = new System.Drawing.Point(18, 149);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(221, 20);
+            this.label1.Size = new System.Drawing.Size(318, 29);
             this.label1.TabIndex = 12;
             this.label1.Text = "Você possui celular proprio: ";
             // 
@@ -74,9 +75,10 @@
             this.cbPossuiCelular.Items.AddRange(new object[] {
             "Sim",
             "Não"});
-            this.cbPossuiCelular.Location = new System.Drawing.Point(239, 97);
+            this.cbPossuiCelular.Location = new System.Drawing.Point(358, 149);
+            this.cbPossuiCelular.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cbPossuiCelular.Name = "cbPossuiCelular";
-            this.cbPossuiCelular.Size = new System.Drawing.Size(121, 21);
+            this.cbPossuiCelular.Size = new System.Drawing.Size(180, 28);
             this.cbPossuiCelular.TabIndex = 13;
             // 
             // label2
@@ -85,9 +87,10 @@
             this.label2.BackColor = System.Drawing.Color.White;
             this.label2.Font = new System.Drawing.Font("Franklin Gothic Medium", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label2.Location = new System.Drawing.Point(12, 150);
+            this.label2.Location = new System.Drawing.Point(18, 231);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(183, 20);
+            this.label2.Size = new System.Drawing.Size(264, 29);
             this.label2.TabIndex = 14;
             this.label2.Text = "Tem acesso a internet: ";
             // 
@@ -101,9 +104,10 @@
             this.cbInternet.Items.AddRange(new object[] {
             "Sim",
             "Não"});
-            this.cbInternet.Location = new System.Drawing.Point(201, 150);
+            this.cbInternet.Location = new System.Drawing.Point(302, 231);
+            this.cbInternet.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cbInternet.Name = "cbInternet";
-            this.cbInternet.Size = new System.Drawing.Size(121, 21);
+            this.cbInternet.Size = new System.Drawing.Size(180, 28);
             this.cbInternet.TabIndex = 15;
             // 
             // label3
@@ -112,21 +116,23 @@
             this.label3.BackColor = System.Drawing.Color.White;
             this.label3.Font = new System.Drawing.Font("Franklin Gothic Medium", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label3.Location = new System.Drawing.Point(385, 98);
+            this.label3.Location = new System.Drawing.Point(578, 151);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(173, 20);
+            this.label3.Size = new System.Drawing.Size(248, 29);
             this.label3.TabIndex = 18;
             this.label3.Text = "Horas de uso por dia: ";
             // 
-            // txtTempoDeUso
+            // textBox1
             // 
-            this.txtTempoDeUso.BackColor = System.Drawing.Color.White;
-            this.txtTempoDeUso.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.txtTempoDeUso.Location = new System.Drawing.Point(564, 99);
-            this.txtTempoDeUso.Name = "txtTempoDeUso";
-            this.txtTempoDeUso.Size = new System.Drawing.Size(125, 20);
-            this.txtTempoDeUso.TabIndex = 19;
-            this.txtTempoDeUso.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress_1);
+            this.textBox1.BackColor = System.Drawing.Color.White;
+            this.textBox1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.textBox1.Location = new System.Drawing.Point(846, 152);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(186, 26);
+            this.textBox1.TabIndex = 19;
+            this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress_1);
             // 
             // label4
             // 
@@ -134,9 +140,10 @@
             this.label4.BackColor = System.Drawing.Color.White;
             this.label4.Font = new System.Drawing.Font("Franklin Gothic Medium", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label4.Location = new System.Drawing.Point(12, 203);
+            this.label4.Location = new System.Drawing.Point(18, 312);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(249, 20);
+            this.label4.Size = new System.Drawing.Size(356, 29);
             this.label4.TabIndex = 20;
             this.label4.Text = "Quais redes socias você utiliza: ";
             // 
@@ -146,9 +153,10 @@
             this.ckYoutube.BackColor = System.Drawing.Color.White;
             this.ckYoutube.Font = new System.Drawing.Font("Franklin Gothic Medium", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ckYoutube.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ckYoutube.Location = new System.Drawing.Point(280, 206);
+            this.ckYoutube.Location = new System.Drawing.Point(420, 317);
+            this.ckYoutube.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.ckYoutube.Name = "ckYoutube";
-            this.ckYoutube.Size = new System.Drawing.Size(74, 19);
+            this.ckYoutube.Size = new System.Drawing.Size(105, 25);
             this.ckYoutube.TabIndex = 21;
             this.ckYoutube.Text = "YouTube";
             this.ckYoutube.UseVisualStyleBackColor = false;
@@ -159,9 +167,10 @@
             this.ckTikTok.BackColor = System.Drawing.Color.White;
             this.ckTikTok.Font = new System.Drawing.Font("Franklin Gothic Medium", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ckTikTok.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ckTikTok.Location = new System.Drawing.Point(373, 206);
+            this.ckTikTok.Location = new System.Drawing.Point(560, 317);
+            this.ckTikTok.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.ckTikTok.Name = "ckTikTok";
-            this.ckTikTok.Size = new System.Drawing.Size(67, 19);
+            this.ckTikTok.Size = new System.Drawing.Size(94, 25);
             this.ckTikTok.TabIndex = 22;
             this.ckTikTok.Text = "Tik Tok";
             this.ckTikTok.UseVisualStyleBackColor = false;
@@ -172,9 +181,10 @@
             this.ckOutrasRedes.BackColor = System.Drawing.Color.White;
             this.ckOutrasRedes.Font = new System.Drawing.Font("Franklin Gothic Medium", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ckOutrasRedes.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ckOutrasRedes.Location = new System.Drawing.Point(461, 206);
+            this.ckOutrasRedes.Location = new System.Drawing.Point(692, 317);
+            this.ckOutrasRedes.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.ckOutrasRedes.Name = "ckOutrasRedes";
-            this.ckOutrasRedes.Size = new System.Drawing.Size(64, 19);
+            this.ckOutrasRedes.Size = new System.Drawing.Size(90, 25);
             this.ckOutrasRedes.TabIndex = 23;
             this.ckOutrasRedes.Text = "Outros";
             this.ckOutrasRedes.UseVisualStyleBackColor = false;
@@ -184,9 +194,10 @@
             // 
             this.txtNomeOutraRede.BackColor = System.Drawing.Color.White;
             this.txtNomeOutraRede.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.txtNomeOutraRede.Location = new System.Drawing.Point(629, 206);
+            this.txtNomeOutraRede.Location = new System.Drawing.Point(944, 317);
+            this.txtNomeOutraRede.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtNomeOutraRede.Name = "txtNomeOutraRede";
-            this.txtNomeOutraRede.Size = new System.Drawing.Size(125, 20);
+            this.txtNomeOutraRede.Size = new System.Drawing.Size(186, 26);
             this.txtNomeOutraRede.TabIndex = 24;
             this.txtNomeOutraRede.Visible = false;
             // 
@@ -196,9 +207,10 @@
             this.label5.BackColor = System.Drawing.Color.White;
             this.label5.Font = new System.Drawing.Font("Franklin Gothic Medium", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label5.Location = new System.Drawing.Point(531, 208);
+            this.label5.Location = new System.Drawing.Point(796, 320);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(92, 15);
+            this.label5.Size = new System.Drawing.Size(128, 21);
             this.label5.TabIndex = 25;
             this.label5.Text = "Digite o nome:";
             this.label5.Visible = false;
@@ -209,9 +221,10 @@
             this.label7.BackColor = System.Drawing.Color.White;
             this.label7.Font = new System.Drawing.Font("Franklin Gothic Medium", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label7.Location = new System.Drawing.Point(12, 254);
+            this.label7.Location = new System.Drawing.Point(18, 391);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(196, 20);
+            this.label7.Size = new System.Drawing.Size(280, 29);
             this.label7.TabIndex = 26;
             this.label7.Text = "Quais jogos você utiliza: ";
             // 
@@ -221,9 +234,10 @@
             this.ckMinecraft.BackColor = System.Drawing.Color.White;
             this.ckMinecraft.Font = new System.Drawing.Font("Franklin Gothic Medium", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ckMinecraft.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ckMinecraft.Location = new System.Drawing.Point(201, 256);
+            this.ckMinecraft.Location = new System.Drawing.Point(302, 394);
+            this.ckMinecraft.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.ckMinecraft.Name = "ckMinecraft";
-            this.ckMinecraft.Size = new System.Drawing.Size(81, 19);
+            this.ckMinecraft.Size = new System.Drawing.Size(114, 25);
             this.ckMinecraft.TabIndex = 27;
             this.ckMinecraft.Text = "Minecraft";
             this.ckMinecraft.UseVisualStyleBackColor = false;
@@ -234,9 +248,10 @@
             this.ckRoblox.BackColor = System.Drawing.Color.White;
             this.ckRoblox.Font = new System.Drawing.Font("Franklin Gothic Medium", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ckRoblox.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ckRoblox.Location = new System.Drawing.Point(201, 282);
+            this.ckRoblox.Location = new System.Drawing.Point(302, 434);
+            this.ckRoblox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.ckRoblox.Name = "ckRoblox";
-            this.ckRoblox.Size = new System.Drawing.Size(65, 19);
+            this.ckRoblox.Size = new System.Drawing.Size(91, 25);
             this.ckRoblox.TabIndex = 28;
             this.ckRoblox.Text = "Roblox";
             this.ckRoblox.UseVisualStyleBackColor = false;
@@ -247,9 +262,10 @@
             this.ckFreeFire.BackColor = System.Drawing.Color.White;
             this.ckFreeFire.Font = new System.Drawing.Font("Franklin Gothic Medium", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ckFreeFire.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ckFreeFire.Location = new System.Drawing.Point(288, 254);
+            this.ckFreeFire.Location = new System.Drawing.Point(432, 391);
+            this.ckFreeFire.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.ckFreeFire.Name = "ckFreeFire";
-            this.ckFreeFire.Size = new System.Drawing.Size(79, 19);
+            this.ckFreeFire.Size = new System.Drawing.Size(110, 25);
             this.ckFreeFire.TabIndex = 29;
             this.ckFreeFire.Text = "Free Fire";
             this.ckFreeFire.UseVisualStyleBackColor = false;
@@ -260,9 +276,10 @@
             this.ckSubway.BackColor = System.Drawing.Color.White;
             this.ckSubway.Font = new System.Drawing.Font("Franklin Gothic Medium", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ckSubway.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ckSubway.Location = new System.Drawing.Point(288, 279);
+            this.ckSubway.Location = new System.Drawing.Point(432, 429);
+            this.ckSubway.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.ckSubway.Name = "ckSubway";
-            this.ckSubway.Size = new System.Drawing.Size(113, 19);
+            this.ckSubway.Size = new System.Drawing.Size(164, 25);
             this.ckSubway.TabIndex = 30;
             this.ckSubway.Text = "Subway Surfers";
             this.ckSubway.UseVisualStyleBackColor = false;
@@ -273,9 +290,10 @@
             this.ckStumble.BackColor = System.Drawing.Color.White;
             this.ckStumble.Font = new System.Drawing.Font("Franklin Gothic Medium", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ckStumble.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ckStumble.Location = new System.Drawing.Point(407, 254);
+            this.ckStumble.Location = new System.Drawing.Point(610, 391);
+            this.ckStumble.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.ckStumble.Name = "ckStumble";
-            this.ckStumble.Size = new System.Drawing.Size(104, 19);
+            this.ckStumble.Size = new System.Drawing.Size(148, 25);
             this.ckStumble.TabIndex = 31;
             this.ckStumble.Text = "Stumble Guys";
             this.ckStumble.UseVisualStyleBackColor = false;
@@ -286,9 +304,10 @@
             this.ckOutrosJogos.BackColor = System.Drawing.Color.White;
             this.ckOutrosJogos.Font = new System.Drawing.Font("Franklin Gothic Medium", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ckOutrosJogos.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ckOutrosJogos.Location = new System.Drawing.Point(407, 279);
+            this.ckOutrosJogos.Location = new System.Drawing.Point(610, 429);
+            this.ckOutrosJogos.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.ckOutrosJogos.Name = "ckOutrosJogos";
-            this.ckOutrosJogos.Size = new System.Drawing.Size(64, 19);
+            this.ckOutrosJogos.Size = new System.Drawing.Size(90, 25);
             this.ckOutrosJogos.TabIndex = 32;
             this.ckOutrosJogos.Text = "Outros";
             this.ckOutrosJogos.UseVisualStyleBackColor = false;
@@ -300,9 +319,10 @@
             this.label8.BackColor = System.Drawing.Color.White;
             this.label8.Font = new System.Drawing.Font("Franklin Gothic Medium", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label8.Location = new System.Drawing.Point(513, 280);
+            this.label8.Location = new System.Drawing.Point(770, 431);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(92, 15);
+            this.label8.Size = new System.Drawing.Size(128, 21);
             this.label8.TabIndex = 34;
             this.label8.Text = "Digite o nome:";
             this.label8.Visible = false;
@@ -311,9 +331,10 @@
             // 
             this.txtOutrosJogos.BackColor = System.Drawing.Color.White;
             this.txtOutrosJogos.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.txtOutrosJogos.Location = new System.Drawing.Point(611, 278);
+            this.txtOutrosJogos.Location = new System.Drawing.Point(916, 428);
+            this.txtOutrosJogos.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtOutrosJogos.Name = "txtOutrosJogos";
-            this.txtOutrosJogos.Size = new System.Drawing.Size(125, 20);
+            this.txtOutrosJogos.Size = new System.Drawing.Size(186, 26);
             this.txtOutrosJogos.TabIndex = 33;
             this.txtOutrosJogos.Visible = false;
             // 
@@ -324,9 +345,10 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button1.Font = new System.Drawing.Font("Franklin Gothic Medium", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button1.Location = new System.Drawing.Point(676, 327);
+            this.button1.Location = new System.Drawing.Point(1014, 503);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(101, 45);
+            this.button1.Size = new System.Drawing.Size(152, 69);
             this.button1.TabIndex = 35;
             this.button1.Text = "Finalizar";
             this.button1.UseVisualStyleBackColor = false;
@@ -334,11 +356,11 @@
             // 
             // questionario_Tempo
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.ClientSize = new System.Drawing.Size(800, 394);
+            this.ClientSize = new System.Drawing.Size(1200, 606);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.txtOutrosJogos);
@@ -355,13 +377,15 @@
             this.Controls.Add(this.ckTikTok);
             this.Controls.Add(this.ckYoutube);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.txtTempoDeUso);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.cbInternet);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.cbPossuiCelular);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "questionario_Tempo";
+            this.Padding = new System.Windows.Forms.Padding(30, 92, 30, 31);
             this.Text = "Questionario";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -374,7 +398,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox cbInternet;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtTempoDeUso;
+        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.CheckBox ckYoutube;
         private System.Windows.Forms.CheckBox ckTikTok;

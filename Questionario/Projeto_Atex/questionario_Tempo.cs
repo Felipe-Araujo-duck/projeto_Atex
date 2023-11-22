@@ -32,7 +32,13 @@ namespace Projeto_Atex
 
         private void textBox1_KeyPress_1(object sender, KeyPressEventArgs e)
         {
-            if (!Char.IsDigit(e.KeyChar) && e.KeyChar != (char)8)
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != ':' && e.KeyChar != ',')
+            {
+                e.Handled = true;
+            }
+
+            // Impedir que a vírgula seja digitada mais de uma vez
+            if (e.KeyChar == ',' && (sender as TextBox).Text.Contains(","))
             {
                 e.Handled = true;
             }
@@ -44,7 +50,8 @@ namespace Projeto_Atex
             {
                 label5.Visible = true;
                 txtNomeOutraRede.Visible = true;
-            }else
+            }
+            else
             {
                 label5.Visible = false;
                 txtNomeOutraRede.Visible = false;
@@ -71,9 +78,9 @@ namespace Projeto_Atex
             InserirCrianca();
             if (cbInternet.Text.Equals("Sim"))
                 questionario.AcessoInternet = 1;
-            if(cbPossuiCelular.Text.Equals("Sim"))
+            if (cbPossuiCelular.Text.Equals("Sim"))
                 questionario.PossuiCelularProprio = 1;
-            questionario.TempoUsoDiario = int.Parse(txtTempoDeUso.Text);
+            questionario.TempoUsoDiario = int.Parse(textBox1.Text);
             string dateNow = DateTime.Now.ToString("yyyy-MM-dd");
 
             int idCrianca;
@@ -100,10 +107,137 @@ namespace Projeto_Atex
 
             InsertJogoRedesSociais(idQuestionario);
             InsertOutrosJogosRedeSocial(idQuestionario);
-            MessageBox.Show("Questionário finalizado com sucesso!");
-            Program.FC.Close();
-            Close();
+            if (!string.IsNullOrWhiteSpace(cbPossuiCelular.Text) && !string.IsNullOrWhiteSpace(cbInternet.Text)
+                && (ckYoutube.Checked || ckTikTok.Checked || ckOutrasRedes.Checked)
+                && (ckMinecraft.Checked || ckFreeFire.Checked || ckRoblox.Checked || ckStumble.Checked || ckSubway.Checked || ckOutrosJogos.Checked))
+            {
+                if (ckOutrasRedes.Checked && ckOutrosJogos.Checked)
+                {
+                    if (!string.IsNullOrWhiteSpace(txtNomeOutraRede.Text) && !string.IsNullOrWhiteSpace(txtOutrosJogos.Text))
+                    {
+                        double valorDouble = ConvertToDouble(textBox1.Text);
 
+                        if (valorDouble != -1)
+                        {
+                            MessageBox.Show("Questionário finalizado com sucesso!");
+                            Program.FC.Close();
+                            Close();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Hora fora do intervalo permitido (0 a 23.59).");
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Preencha o campo nome de outras redes sociais e outros jogos.");
+                    }
+                }
+                else if (ckOutrasRedes.Checked)
+                {
+                    if (!string.IsNullOrWhiteSpace(txtNomeOutraRede.Text))
+                    {
+                        double valorDouble = ConvertToDouble(textBox1.Text);
+
+                        if (valorDouble != -1)
+                        {
+                            MessageBox.Show("Questionário finalizado com sucesso!");
+                            Program.FC.Close();
+                            Close();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Hora fora do intervalo permitido (0 a 23.59).");
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Preencha o campo nome de outras redes sociais.");
+                    }
+
+                }
+                else if (ckOutrosJogos.Checked)
+                {
+                    if (!string.IsNullOrWhiteSpace(txtOutrosJogos.Text))
+                    {
+                        double valorDouble = ConvertToDouble(textBox1.Text);
+
+                        if (valorDouble != -1)
+                        {
+                            MessageBox.Show("Questionário finalizado com sucesso!");
+                            Program.FC.Close();
+                            Close();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Hora fora do intervalo permitido (0 a 23.59).");
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Preencha o campo nome de outros jogos.");
+                    }
+                }
+                else
+                {
+                    double valorDouble = ConvertToDouble(textBox1.Text);
+
+                    if (valorDouble != -1)
+                    {
+                        MessageBox.Show("Questionário finalizado com sucesso!");
+                        Program.FC.Close();
+                        Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Hora fora do intervalo permitido (0 a 23.59).");
+                    }
+                }
+
+            }
+            else
+                MessageBox.Show("Há campos não preenchidos!");
+        }
+
+
+        private double ConvertToDouble(string horaInput)
+        {
+            if (double.TryParse(horaInput, out double valorDouble))
+            {
+                string[] parts = horaInput.Split(new[] { ',', ':' }, StringSplitOptions.RemoveEmptyEntries);
+                if (parts.Length == 2)
+                {
+                    int hours = int.Parse(parts[0]);
+                    int minutes = int.Parse(parts[1]);
+                    var aux = parts[1].Split('0');
+                    if (aux[0] != "")
+                    {
+                        minutes = minutes < 10 && minutes > 5 ? minutes * 10 : minutes;
+                    }
+
+                    if (hours < 24 && minutes < 60)
+                    {
+                        return valorDouble;
+                    }
+
+
+
+                }
+                else if (parts.Length == 1)
+                {
+                    int hours = int.Parse(parts[0]);
+                    if (hours < 24)
+                    {
+                        return valorDouble;
+                    }
+                }
+                else
+                {
+                    return -1;
+                }
+            }
+
+            return -1.0; // Valor inválido
         }
 
         private void InserirResponsavel()
@@ -130,20 +264,20 @@ namespace Projeto_Atex
             List<int> aux = new List<int>();
             if (ckYoutube.Checked)
                 aux.Add(2);
-            if(ckTikTok.Checked)
+            if (ckTikTok.Checked)
                 aux.Add(1);
-            if(ckFreeFire.Checked)
+            if (ckFreeFire.Checked)
                 aux.Add(3);
-            if(ckStumble.Checked)
+            if (ckStumble.Checked)
                 aux.Add(4);
-            if(ckRoblox.Checked)
+            if (ckRoblox.Checked)
                 aux.Add(5);
-            if(ckMinecraft.Checked)
+            if (ckMinecraft.Checked)
                 aux.Add(6);
-            if(ckSubway.Checked)
+            if (ckSubway.Checked)
                 aux.Add(7);
 
-            foreach(var item in aux)
+            foreach (var item in aux)
             {
                 string sql = $"INSERT INTO CriancaJogoRedeSocial (idJogoRedeSocial, idQuestionario) values ('{item}', '{idQuestionario}')";
                 _tools.ExecuteNonQuery(sql);
@@ -152,7 +286,7 @@ namespace Projeto_Atex
 
         public void InsertOutrosJogosRedeSocial(int idQuestionario)
         {
-            if(ckOutrosJogos.Checked)
+            if (ckOutrosJogos.Checked)
             {
                 string sql = $"INSERT INTO OutroJogoRedeSocial (nome, tipo, idQuestionario) VALUES('{txtOutrosJogos.Text}', 'Jogo', '{idQuestionario}')";
                 _tools.ExecuteNonQuery(sql);
