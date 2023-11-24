@@ -45,6 +45,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -63,9 +64,9 @@
       <DependentUpon>cadastro.cs</DependentUpon>
     </Compile>
     <Compile Include="Data\DataTools.cs" />
+    <Compile Include="Data\Entity\CriancaEscola.cs" />
     <Compile Include="Data\Entity\CriancaQuestionario.cs" />
     <Compile Include="Data\Entity\Escola.cs" />
-    <Compile Include="Data\Entity\CriancaJogoRedeSocial.cs" />
     <Compile Include="Data\Entity\JogoRedeSocial.cs" />
     <Compile Include="Data\Entity\OutroJogoRedeSocial.cs" />
     <Compile Include="Data\Entity\Questionario.cs" />

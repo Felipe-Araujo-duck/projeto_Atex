@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Projeto_Atex.Data.Entity;
+using System.Reflection;
 
 namespace Projeto_Atex.Data
 {
@@ -47,6 +48,53 @@ namespace Projeto_Atex.Data
             conn.Close();
             return set;
         }
+
+        public int GetJogadoresPorEscolaPorJogo(string escola, string jogo)
+        {
+            int resultado = 0;
+            DataTools _tools = new DataTools();
+            SqlConnection conn = _tools.ConnectionDB();
+            conn.Open();
+
+            SqlCommand command = new SqlCommand("Select Count(cjrs.idCriancaJogoRedeSocial) " +
+                "from CriancaJogoRedeSocial cjrs " +
+                "inner join JogoRedeSocial jrs on jrs.idJogoRedeSocial = cjrs.idJogoRedeSocial " +
+                "inner join Questionario q on q.idQuestionario = cjrs.idQuestionario " +
+                "inner join Crianca c on c.idCrianca = q.idCrianca " +
+                "inner join Escola e on e.idEscola = c.idEscola " +
+                $"where e.nome = '{escola}' and jrs.nome = '{jogo}' " +
+                "group by jrs.nome", conn);
+
+            SqlDataReader reader = command.ExecuteReader();
+            while (reader.Read())
+            {
+                resultado = reader.GetInt32(0);
+            }
+            return resultado;
+        }
+
+        public int GetJogadoresPorEscolaOutroJogoRedeSocial(string escola)
+        {
+            int resultado = 0;
+            DataTools _tools = new DataTools();
+            SqlConnection conn = _tools.ConnectionDB();
+            conn.Open();
+
+            SqlCommand command = new SqlCommand("select count(ojrs.idOutroJogoRedeSocial) " +
+                "from OutroJogoRedeSocial ojrs " +
+                "inner join Questionario q on q.idQuestionario = ojrs.idQuestionario " +
+                "inner join Crianca c on c.idCrianca = q.idCrianca " +
+                "inner join Escola e on e.idEscola = c.idEscola " +
+                $"where e.nome = '{escola}' group by e.nome", conn);
+
+            SqlDataReader reader = command.ExecuteReader();
+            while (reader.Read())
+            {
+                resultado = reader.GetInt32(0);
+            }
+            return resultado;
+        }
+
 
         public List<string> GetOutroJogoRedeSocial(int idCrianca)
         {

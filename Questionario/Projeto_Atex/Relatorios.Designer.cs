@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Relatorios));
             this.metroTabControl1 = new MetroFramework.Controls.MetroTabControl();
             this.tabCrianca = new MetroFramework.Controls.MetroTabPage();
@@ -36,8 +37,12 @@
             this.btnPesquisar = new MetroFramework.Controls.MetroButton();
             this.txtPesquisa = new MetroFramework.Controls.MetroTextBox();
             this.tabEscola = new MetroFramework.Controls.MetroTabPage();
+            this.grafico = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.cmbEscola = new MetroFramework.Controls.MetroComboBox();
             this.metroTabControl1.SuspendLayout();
             this.tabCrianca.SuspendLayout();
+            this.tabEscola.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.grafico)).BeginInit();
             this.SuspendLayout();
             // 
             // metroTabControl1
@@ -46,8 +51,8 @@
             this.metroTabControl1.Controls.Add(this.tabEscola);
             this.metroTabControl1.Location = new System.Drawing.Point(11, 48);
             this.metroTabControl1.Name = "metroTabControl1";
-            this.metroTabControl1.SelectedIndex = 0;
-            this.metroTabControl1.Size = new System.Drawing.Size(1074, 590);
+            this.metroTabControl1.SelectedIndex = 1;
+            this.metroTabControl1.Size = new System.Drawing.Size(1046, 590);
             this.metroTabControl1.TabIndex = 0;
             // 
             // tabCrianca
@@ -59,7 +64,7 @@
             this.tabCrianca.HorizontalScrollbarBarColor = true;
             this.tabCrianca.Location = new System.Drawing.Point(4, 35);
             this.tabCrianca.Name = "tabCrianca";
-            this.tabCrianca.Size = new System.Drawing.Size(1066, 551);
+            this.tabCrianca.Size = new System.Drawing.Size(1038, 551);
             this.tabCrianca.TabIndex = 0;
             this.tabCrianca.Text = "Criança";
             this.tabCrianca.VerticalScrollbarBarColor = true;
@@ -104,13 +109,38 @@
             // 
             // tabEscola
             // 
+            this.tabEscola.Controls.Add(this.cmbEscola);
+            this.tabEscola.Controls.Add(this.grafico);
             this.tabEscola.HorizontalScrollbarBarColor = true;
             this.tabEscola.Location = new System.Drawing.Point(4, 35);
             this.tabEscola.Name = "tabEscola";
-            this.tabEscola.Size = new System.Drawing.Size(1066, 551);
+            this.tabEscola.Size = new System.Drawing.Size(1038, 551);
             this.tabEscola.TabIndex = 1;
             this.tabEscola.Text = "Escola";
             this.tabEscola.VerticalScrollbarBarColor = true;
+            // 
+            // grafico
+            // 
+            chartArea1.Name = "ChartArea1";
+            this.grafico.ChartAreas.Add(chartArea1);
+            this.grafico.Location = new System.Drawing.Point(44, 77);
+            this.grafico.Name = "grafico";
+            this.grafico.Size = new System.Drawing.Size(957, 436);
+            this.grafico.TabIndex = 2;
+            this.grafico.Text = "Gráficos";
+            // 
+            // cmbEscola
+            // 
+            this.cmbEscola.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.cmbEscola.FontSize = MetroFramework.MetroLinkSize.Tall;
+            this.cmbEscola.FontWeight = MetroFramework.MetroLinkWeight.Bold;
+            this.cmbEscola.FormattingEnabled = true;
+            this.cmbEscola.ItemHeight = 29;
+            this.cmbEscola.Location = new System.Drawing.Point(44, 25);
+            this.cmbEscola.Name = "cmbEscola";
+            this.cmbEscola.Size = new System.Drawing.Size(255, 35);
+            this.cmbEscola.TabIndex = 3;
+            this.cmbEscola.SelectedIndexChanged += new System.EventHandler(this.cmbEscola_SelectedIndexChanged);
             // 
             // Relatorios
             // 
@@ -122,8 +152,11 @@
             this.Controls.Add(this.metroTabControl1);
             this.Name = "Relatorios";
             this.Text = "Relatórios";
+            this.Load += new System.EventHandler(this.Relatorios_Load);
             this.metroTabControl1.ResumeLayout(false);
             this.tabCrianca.ResumeLayout(false);
+            this.tabEscola.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.grafico)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -137,5 +170,7 @@
         private MetroFramework.Controls.MetroTextBox txtPesquisa;
         private MetroFramework.Controls.MetroTabPage tabEscola;
         private System.Windows.Forms.ListView lstCriancas;
+        private System.Windows.Forms.DataVisualization.Charting.Chart grafico;
+        private MetroFramework.Controls.MetroComboBox cmbEscola;
     }
 }
