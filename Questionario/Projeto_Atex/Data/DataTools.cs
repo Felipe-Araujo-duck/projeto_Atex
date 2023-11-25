@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Projeto_Atex.Data.Entity;
+using System.Reflection;
 
 namespace Projeto_Atex.Data
 {
@@ -47,6 +48,53 @@ namespace Projeto_Atex.Data
             conn.Close();
             return set;
         }
+
+        public int GetJogadoresPorEscolaPorJogo(string escola, string jogo)
+        {
+            int resultado = 0;
+            DataTools _tools = new DataTools();
+            SqlConnection conn = _tools.ConnectionDB();
+            conn.Open();
+
+            SqlCommand command = new SqlCommand("Select Count(cjrs.idCriancaJogoRedeSocial) " +
+                "from CriancaJogoRedeSocial cjrs " +
+                "inner join JogoRedeSocial jrs on jrs.idJogoRedeSocial = cjrs.idJogoRedeSocial " +
+                "inner join Questionario q on q.idQuestionario = cjrs.idQuestionario " +
+                "inner join Crianca c on c.idCrianca = q.idCrianca " +
+                "inner join Escola e on e.idEscola = c.idEscola " +
+                $"where e.nome = '{escola}' and jrs.nome = '{jogo}' " +
+                "group by jrs.nome", conn);
+
+            SqlDataReader reader = command.ExecuteReader();
+            while (reader.Read())
+            {
+                resultado = reader.GetInt32(0);
+            }
+            return resultado;
+        }
+
+        public int GetJogadoresPorEscolaOutroJogoRedeSocial(string escola)
+        {
+            int resultado = 0;
+            DataTools _tools = new DataTools();
+            SqlConnection conn = _tools.ConnectionDB();
+            conn.Open();
+
+            SqlCommand command = new SqlCommand("select count(ojrs.idOutroJogoRedeSocial) " +
+                "from OutroJogoRedeSocial ojrs " +
+                "inner join Questionario q on q.idQuestionario = ojrs.idQuestionario " +
+                "inner join Crianca c on c.idCrianca = q.idCrianca " +
+                "inner join Escola e on e.idEscola = c.idEscola " +
+                $"where e.nome = '{escola}' group by e.nome", conn);
+
+            SqlDataReader reader = command.ExecuteReader();
+            while (reader.Read())
+            {
+                resultado = reader.GetInt32(0);
+            }
+            return resultado;
+        }
+
 
         public List<string> GetOutroJogoRedeSocial(int idCrianca)
         {
@@ -115,6 +163,35 @@ namespace Projeto_Atex.Data
                     continue;
                 else
                     criancas.Add(c);    
+            }
+            conn.Close();
+            return criancas;
+        }
+
+        public List<CriancaQuestionario> PesquisarDbSet(SqlConnection conn, string pesquisa)
+        {
+            CriancaQuestionario c = new CriancaQuestionario();
+            conn.Open();
+            List<CriancaQuestionario> criancas = new List<CriancaQuestionario>();
+            SqlCommand command = new SqlCommand($"Select * From Atualizar Where nome like '%{pesquisa}%'");
+            command.Connection = conn;
+            SqlDataReader reader = command.ExecuteReader();
+            while (reader.Read())
+            {
+                c = new CriancaQuestionario();
+                c.IdCrianca = reader.GetInt32(0);
+                c.Nome = reader.GetString(1);
+                c.DataQuestionario = reader.GetDateTime(2).ToString("dd/MM/yyyy");
+                c.PossuiCelularProprioSet = reader.GetInt16(3);
+                c.AcessoInternetSet = reader.GetInt16(4);
+                c.TempoUsoDiario = reader.GetInt32(5);
+                c.RecebeMonitoramentoSet = reader.GetInt32(6);
+                c.JogoRedeSocial = GetJogoRedeSociais(c.IdCrianca);
+                c.OutroJogoRedeSocial = GetOutroJogoRedeSocial(c.IdCrianca);
+                if (criancas.Any(x => x.IdCrianca == c.IdCrianca))
+                    continue;
+                else
+                    criancas.Add(c);
             }
             conn.Close();
             return criancas;
