@@ -54,11 +54,13 @@ namespace Projeto_Atex
             {
                 label5.Visible = true;
                 txtNomeOutraRede.Visible = true;
+                btnAdicionarRede.Visible = true;
             }
             else
             {
                 label5.Visible = false;
                 txtNomeOutraRede.Visible = false;
+                btnAdicionarRede .Visible = false;
             }
         }
 
@@ -68,11 +70,13 @@ namespace Projeto_Atex
             {
                 label8.Visible = true;
                 txtOutrosJogos.Visible = true;
+                btnAdicionarJogo.Visible = true;
             }
             else
             {
                 label8.Visible = false;
                 txtOutrosJogos.Visible = false;
+                btnAdicionarJogo.Visible = false;
             }
         }
 
@@ -320,6 +324,11 @@ namespace Projeto_Atex
         {
             outrosJogos.Add(txtOutrosJogos.Text);
             txtOutrosJogos.Text = "";
+        }
+
+        private void txtOutrosJogos_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

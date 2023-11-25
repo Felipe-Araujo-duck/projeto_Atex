@@ -318,6 +318,7 @@
             this.txtOutrosJogos.Size = new System.Drawing.Size(125, 20);
             this.txtOutrosJogos.TabIndex = 33;
             this.txtOutrosJogos.Visible = false;
+            this.txtOutrosJogos.TextChanged += new System.EventHandler(this.txtOutrosJogos_TextChanged);
             // 
             // button1
             // 
@@ -347,6 +348,7 @@
             this.btnAdicionarJogo.TabIndex = 37;
             this.btnAdicionarJogo.Text = "Adicionar";
             this.btnAdicionarJogo.UseVisualStyleBackColor = false;
+            this.btnAdicionarJogo.Visible = false;
             this.btnAdicionarJogo.Click += new System.EventHandler(this.btnAdicionarJogo_Click);
             // 
             // btnAdicionarRede
@@ -362,6 +364,7 @@
             this.btnAdicionarRede.TabIndex = 38;
             this.btnAdicionarRede.Text = "Adicionar";
             this.btnAdicionarRede.UseVisualStyleBackColor = false;
+            this.btnAdicionarRede.Visible = false;
             this.btnAdicionarRede.Click += new System.EventHandler(this.btnAdicionarRede_Click);
             // 
             // questionario_Tempo
