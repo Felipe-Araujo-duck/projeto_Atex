@@ -23,12 +23,16 @@ namespace Projeto_Atex
             this.crianca = crianca;
             _tools = new DataTools();
             _connection = _tools.ConnectionDB();
+            outrasRedes = new List<string>();
+            outrosJogos = new List<string>();
         }
         private SqlConnection _connection;
         private DataTools _tools;
         public Responsavel responsavel;
         public Questionario questionario;
         public CriancaQuestionario crianca;
+        public List<string> outrasRedes;
+        public List<string> outrosJogos;
 
         private void textBox1_KeyPress_1(object sender, KeyPressEventArgs e)
         {
@@ -74,46 +78,13 @@ namespace Projeto_Atex
 
         private void button1_Click(object sender, EventArgs e)
         {
-            InserirResponsavel();
-            InserirCrianca();
-            if (cbInternet.Text.Equals("Sim"))
-                questionario.AcessoInternet = 1;
-            if (cbPossuiCelular.Text.Equals("Sim"))
-                questionario.PossuiCelularProprio = 1;
-            questionario.TempoUsoDiario = int.Parse(textBox1.Text);
-            string dateNow = DateTime.Now.ToString("yyyy-MM-dd");
-
-            int idCrianca;
-            string sqlCrianca = $"SELECT TOP(1) idCrianca FROM Crianca WHERE idResponsavel='{crianca.IdResponsavel}'";
-            SqlCommand cmdCri = _tools.GetCommand(sqlCrianca, _connection);
-            _connection.Open();
-            SqlDataReader readert = cmdCri.ExecuteReader();
-            readert.Read();
-            idCrianca = int.Parse(readert["idCrianca"].ToString());
-            _connection.Close();
-            crianca.IdCrianca = idCrianca;
-
-            string sql = $"INSERT INTO Questionario (idCrianca, dataQuestionario, possuiCelularProprio, acessoInternet, tempoUsoDiario, recebeMonitoramento) VALUES ('{idCrianca}', '{dateNow}', '{questionario.PossuiCelularProprio}', '{questionario.AcessoInternet}', '{questionario.TempoUsoDiario}', '{questionario.RecebeMonitoramento}')";
-            _tools.ExecuteNonQuery(sql);
-
-            int idQuestionario;
-            string sqlQuestionario = $"SELECT TOP(1) idQuestionario FROM Questionario WHERE idCrianca='{idCrianca}'";
-            SqlCommand cmd = _tools.GetCommand(sqlQuestionario, _connection);
-            _connection.Open();
-            SqlDataReader reader = cmd.ExecuteReader();
-            reader.Read();
-            idQuestionario = int.Parse(reader["idQuestionario"].ToString());
-            _connection.Close();
-
-            InsertJogoRedesSociais(idQuestionario);
-            InsertOutrosJogosRedeSocial(idQuestionario);
             if (!string.IsNullOrWhiteSpace(cbPossuiCelular.Text) && !string.IsNullOrWhiteSpace(cbInternet.Text)
                 && (ckYoutube.Checked || ckTikTok.Checked || ckOutrasRedes.Checked)
                 && (ckMinecraft.Checked || ckFreeFire.Checked || ckRoblox.Checked || ckStumble.Checked || ckSubway.Checked || ckOutrosJogos.Checked))
             {
                 if (ckOutrasRedes.Checked && ckOutrosJogos.Checked)
                 {
-                    if (!string.IsNullOrWhiteSpace(txtNomeOutraRede.Text) && !string.IsNullOrWhiteSpace(txtOutrosJogos.Text))
+                    if (outrosJogos.Count() > 0 && outrasRedes.Count() > 0)
                     {
                         double valorDouble = ConvertToDouble(textBox1.Text);
 
@@ -135,7 +106,7 @@ namespace Projeto_Atex
                 }
                 else if (ckOutrasRedes.Checked)
                 {
-                    if (!string.IsNullOrWhiteSpace(txtNomeOutraRede.Text))
+                    if (outrasRedes.Count() > 0)
                     {
                         double valorDouble = ConvertToDouble(textBox1.Text);
 
@@ -158,7 +129,7 @@ namespace Projeto_Atex
                 }
                 else if (ckOutrosJogos.Checked)
                 {
-                    if (!string.IsNullOrWhiteSpace(txtOutrosJogos.Text))
+                    if (outrosJogos.Count() > 0)
                     {
                         double valorDouble = ConvertToDouble(textBox1.Text);
 
@@ -197,6 +168,40 @@ namespace Projeto_Atex
             }
             else
                 MessageBox.Show("Há campos não preenchidos!");
+
+            InserirResponsavel();
+            InserirCrianca();
+            if (cbInternet.Text.Equals("Sim"))
+                questionario.AcessoInternet = 1;
+            if (cbPossuiCelular.Text.Equals("Sim"))
+                questionario.PossuiCelularProprio = 1;
+            questionario.TempoUsoDiario = int.Parse(textBox1.Text);
+            string dateNow = DateTime.Now.ToString("yyyy-MM-dd");
+
+            int idCrianca;
+            string sqlCrianca = $"SELECT TOP(1) idCrianca FROM Crianca WHERE idResponsavel='{crianca.IdResponsavel}'";
+            SqlCommand cmdCri = _tools.GetCommand(sqlCrianca, _connection);
+            _connection.Open();
+            SqlDataReader readert = cmdCri.ExecuteReader();
+            readert.Read();
+            idCrianca = int.Parse(readert["idCrianca"].ToString());
+            _connection.Close();
+            crianca.IdCrianca = idCrianca;
+
+            string sql = $"INSERT INTO Questionario (idCrianca, dataQuestionario, possuiCelularProprio, acessoInternet, tempoUsoDiario, recebeMonitoramento) VALUES ('{idCrianca}', '{dateNow}', '{questionario.PossuiCelularProprio}', '{questionario.AcessoInternet}', '{questionario.TempoUsoDiario}', '{questionario.RecebeMonitoramento}')";
+            _tools.ExecuteNonQuery(sql);
+
+            int idQuestionario;
+            string sqlQuestionario = $"SELECT TOP(1) idQuestionario FROM Questionario WHERE idCrianca='{idCrianca}'";
+            SqlCommand cmd = _tools.GetCommand(sqlQuestionario, _connection);
+            _connection.Open();
+            SqlDataReader reader = cmd.ExecuteReader();
+            reader.Read();
+            idQuestionario = int.Parse(reader["idQuestionario"].ToString());
+            _connection.Close();
+
+            InsertJogoRedesSociais(idQuestionario);
+            InsertOutrosJogosRedeSocial(idQuestionario);
         }
 
 
@@ -288,14 +293,33 @@ namespace Projeto_Atex
         {
             if (ckOutrosJogos.Checked)
             {
-                string sql = $"INSERT INTO OutroJogoRedeSocial (nome, tipo, idQuestionario) VALUES('{txtOutrosJogos.Text}', 'Jogo', '{idQuestionario}')";
-                _tools.ExecuteNonQuery(sql);
+                foreach(var jogo in outrosJogos)
+                {
+                    string sql = $"INSERT INTO OutroJogoRedeSocial (nome, tipo, idQuestionario) VALUES('{jogo}', 'Jogo', '{idQuestionario}')";
+                    _tools.ExecuteNonQuery(sql);
+                }
+                
             }
             if (ckOutrasRedes.Checked)
             {
-                string sql = $"INSERT INTO OutroJogoRedeSocial (nome, tipo, idQuestionario) VALUES('{txtNomeOutraRede.Text}', 'Rede Social', '{idQuestionario}')";
-                _tools.ExecuteNonQuery(sql);
+                foreach(var rede in outrasRedes)
+                {
+                    string sql = $"INSERT INTO OutroJogoRedeSocial (nome, tipo, idQuestionario) VALUES('{rede}', 'Rede Social', '{idQuestionario}')";
+                    _tools.ExecuteNonQuery(sql);
+                }
             }
+        }
+
+        private void btnAdicionarRede_Click(object sender, EventArgs e)
+        {
+            outrasRedes.Add(txtNomeOutraRede.Text);
+            txtNomeOutraRede.Text = "";
+        }
+
+        private void btnAdicionarJogo_Click(object sender, EventArgs e)
+        {
+            outrosJogos.Add(txtOutrosJogos.Text);
+            txtOutrosJogos.Text = "";
         }
     }
 }

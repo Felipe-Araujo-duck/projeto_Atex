@@ -81,12 +81,15 @@ namespace Projeto_Atex
             // por omissão tem 10 ou menos dígitos
             string strMascara = "{0:(00)0000-0000}";
             // converter o texto em número
-            long lngNumero = Convert.ToInt64(strNumero);
+            if (!string.IsNullOrEmpty(strNumero)) { 
+                long lngNumero = Convert.ToInt64(strNumero);
 
-            if (strNumero.Length == 11)
-                strMascara = "{0:(00)00000-0000}";
+                if (strNumero.Length == 11)
+                    strMascara = "{0:(00)00000-0000}";
 
-            return string.Format(strMascara, lngNumero);
+                return string.Format(strMascara, lngNumero);
+            }
+            return "";
         }
 
         string RemoverCaracteresDeFormatacao(string numeroFormatado)
