@@ -36,16 +36,11 @@ namespace Projeto_Atex
 
         private void textBox1_KeyPress_1(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != ':' && e.KeyChar != ',')
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
             {
                 e.Handled = true;
             }
 
-            // Impedir que a vírgula seja digitada mais de uma vez
-            if (e.KeyChar == ',' && (sender as TextBox).Text.Contains(","))
-            {
-                e.Handled = true;
-            }
         }
 
         private void checkBox3_Click(object sender, EventArgs e)
@@ -82,6 +77,7 @@ namespace Projeto_Atex
 
         private void button1_Click(object sender, EventArgs e)
         {
+            bool flag = true;
             if (!string.IsNullOrWhiteSpace(cbPossuiCelular.Text) && !string.IsNullOrWhiteSpace(cbInternet.Text)
                 && (ckYoutube.Checked || ckTikTok.Checked || ckOutrasRedes.Checked)
                 && (ckMinecraft.Checked || ckFreeFire.Checked || ckRoblox.Checked || ckStumble.Checked || ckSubway.Checked || ckOutrosJogos.Checked))
@@ -101,10 +97,12 @@ namespace Projeto_Atex
                         else
                         {
                             MessageBox.Show("Hora fora do intervalo permitido (0 a 23.59).");
+                            flag= false;
                         }
                     }
                     else
                     {
+                        flag = false;
                         MessageBox.Show("Preencha o campo nome de outras redes sociais e outros jogos.");
                     }
                 }
@@ -122,11 +120,13 @@ namespace Projeto_Atex
                         }
                         else
                         {
+                            flag = false;
                             MessageBox.Show("Hora fora do intervalo permitido (0 a 23.59).");
                         }
                     }
                     else
                     {
+                        flag = false;
                         MessageBox.Show("Preencha o campo nome de outras redes sociais.");
                     }
 
@@ -145,11 +145,13 @@ namespace Projeto_Atex
                         }
                         else
                         {
+                            flag = false;
                             MessageBox.Show("Hora fora do intervalo permitido (0 a 23.59).");
                         }
                     }
                     else
                     {
+                        flag = false;
                         MessageBox.Show("Preencha o campo nome de outros jogos.");
                     }
                 }
@@ -165,47 +167,55 @@ namespace Projeto_Atex
                     }
                     else
                     {
+                        flag = false;
                         MessageBox.Show("Hora fora do intervalo permitido (0 a 23.59).");
                     }
                 }
 
             }
             else
+            {
+                flag = false;
                 MessageBox.Show("Há campos não preenchidos!");
+            }
 
-            InserirResponsavel();
-            InserirCrianca();
-            if (cbInternet.Text.Equals("Sim"))
-                questionario.AcessoInternet = 1;
-            if (cbPossuiCelular.Text.Equals("Sim"))
-                questionario.PossuiCelularProprio = 1;
-            questionario.TempoUsoDiario = int.Parse(textBox1.Text);
-            string dateNow = DateTime.Now.ToString("yyyy-MM-dd");
+            if (flag)
+            {
+                InserirResponsavel();
+                InserirCrianca();
+                if (cbInternet.Text.Equals("Sim"))
+                    questionario.AcessoInternet = 1;
+                if (cbPossuiCelular.Text.Equals("Sim"))
+                    questionario.PossuiCelularProprio = 1;
+                questionario.TempoUsoDiario = int.Parse(textBox1.Text);
+                string dateNow = DateTime.Now.ToString("yyyy-MM-dd");
 
-            int idCrianca;
-            string sqlCrianca = $"SELECT TOP(1) idCrianca FROM Crianca WHERE idResponsavel='{crianca.IdResponsavel}'";
-            SqlCommand cmdCri = _tools.GetCommand(sqlCrianca, _connection);
-            _connection.Open();
-            SqlDataReader readert = cmdCri.ExecuteReader();
-            readert.Read();
-            idCrianca = int.Parse(readert["idCrianca"].ToString());
-            _connection.Close();
-            crianca.IdCrianca = idCrianca;
+                int idCrianca;
+                string sqlCrianca = $"SELECT TOP(1) idCrianca FROM Crianca WHERE idResponsavel='{crianca.IdResponsavel}'";
+                SqlCommand cmdCri = _tools.GetCommand(sqlCrianca, _connection);
+                _connection.Open();
+                SqlDataReader readert = cmdCri.ExecuteReader();
+                readert.Read();
+                idCrianca = int.Parse(readert["idCrianca"].ToString());
+                _connection.Close();
+                crianca.IdCrianca = idCrianca;
 
-            string sql = $"INSERT INTO Questionario (idCrianca, dataQuestionario, possuiCelularProprio, acessoInternet, tempoUsoDiario, recebeMonitoramento) VALUES ('{idCrianca}', '{dateNow}', '{questionario.PossuiCelularProprio}', '{questionario.AcessoInternet}', '{questionario.TempoUsoDiario}', '{questionario.RecebeMonitoramento}')";
-            _tools.ExecuteNonQuery(sql);
+                string sql = $"INSERT INTO Questionario (idCrianca, dataQuestionario, possuiCelularProprio, acessoInternet, tempoUsoDiario, recebeMonitoramento) VALUES ('{idCrianca}', '{dateNow}', '{questionario.PossuiCelularProprio}', '{questionario.AcessoInternet}', '{questionario.TempoUsoDiario}', '{questionario.RecebeMonitoramento}')";
+                _tools.ExecuteNonQuery(sql);
 
-            int idQuestionario;
-            string sqlQuestionario = $"SELECT TOP(1) idQuestionario FROM Questionario WHERE idCrianca='{idCrianca}'";
-            SqlCommand cmd = _tools.GetCommand(sqlQuestionario, _connection);
-            _connection.Open();
-            SqlDataReader reader = cmd.ExecuteReader();
-            reader.Read();
-            idQuestionario = int.Parse(reader["idQuestionario"].ToString());
-            _connection.Close();
+                int idQuestionario;
+                string sqlQuestionario = $"SELECT TOP(1) idQuestionario FROM Questionario WHERE idCrianca='{idCrianca}'";
+                SqlCommand cmd = _tools.GetCommand(sqlQuestionario, _connection);
+                _connection.Open();
+                SqlDataReader reader = cmd.ExecuteReader();
+                reader.Read();
+                idQuestionario = int.Parse(reader["idQuestionario"].ToString());
+                _connection.Close();
 
-            InsertJogoRedesSociais(idQuestionario);
-            InsertOutrosJogosRedeSocial(idQuestionario);
+                InsertJogoRedesSociais(idQuestionario);
+                InsertOutrosJogosRedeSocial(idQuestionario);
+            }
+            
         }
 
 
